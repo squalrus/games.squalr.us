@@ -202,17 +202,23 @@ html, body {
 
 /* ── Footer stats ── */
 
-.stats {
+.site-footer {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadein 0.9s ease 0.4s both;
+}
+
+.stats {
+  display: flex;
   justify-content: center;
   gap: 56px;
-  padding: 26px 40px 24px;
+  padding: 26px 40px 14px;
   pointer-events: none;
-  animation: fadein 0.9s ease 0.4s both;
 }
 
 .stat {
@@ -241,4 +247,114 @@ html, body {
   .stats {
     gap: 28px;
   }
+}
+
+/* ── Footer legal ── */
+
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6px 10px;
+  padding: 0 24px 18px;
+  pointer-events: auto;
+  font: 500 11px/1.6 ui-monospace, monospace;
+  letter-spacing: 0.04em;
+  color: rgba(200, 234, 228, 0.45);
+  text-align: center;
+}
+
+.legal-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legal a {
+  color: rgba(214, 238, 234, 0.65);
+  text-decoration: none;
+}
+
+.legal a:hover {
+  color: #eafaf6;
+  text-decoration: underline;
+}
+
+.legal .dot {
+  color: rgba(200, 234, 228, 0.3);
+}
+
+/* ── Legal pages (privacy/support) ── */
+
+.legal-page {
+  position: static;
+  overflow: auto;
+  height: auto;
+  min-height: 100%;
+}
+
+.doc {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 120px 24px 80px;
+  color: rgba(220, 240, 238, 0.85);
+  font: 400 16px/1.65 'Space Grotesk', sans-serif;
+  animation: fadein 0.7s ease both;
+}
+
+.doc h1 {
+  margin: 0 0 8px;
+  font: 600 clamp(30px, 5vw, 44px)/1.05 'Space Grotesk', sans-serif;
+  color: #f3fffb;
+  letter-spacing: -0.02em;
+}
+
+.doc .updated {
+  margin: 0 0 40px;
+  font: 500 12px/1 ui-monospace, monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(200, 234, 228, 0.5);
+}
+
+.doc h2 {
+  margin: 36px 0 12px;
+  font: 600 20px/1.3 'Space Grotesk', sans-serif;
+  color: #eafaf6;
+}
+
+.doc p, .doc li {
+  color: rgba(214, 238, 234, 0.78);
+}
+
+.doc a {
+  color: oklch(0.78 0.13 195);
+}
+
+.doc ul {
+  padding-left: 22px;
+}
+
+.back-link {
+  position: absolute;
+  top: 26px;
+  left: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font: 600 13px/1 'Space Grotesk', sans-serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(214, 238, 234, 0.7);
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: #eafaf6;
+}
+
+.legal-page .site-footer {
+  position: static;
+  margin-top: 40px;
 }
