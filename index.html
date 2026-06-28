@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>InfinitySpace — Coming Soon</title>
+<meta name="description" content="InfinitySpace is a top-down survival space shooter for Android. Procedurally generated sectors, scavenge for parts, and push as deep as you can. Coming soon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="bg-root" class="bg-root">
+
+  <div class="layer" data-depth="deep" data-factor="0.15"></div>
+  <div id="galaxy-wrap" class="galaxy-wrap"></div>
+  <div class="layer" data-depth="mid" data-factor="0.45"></div>
+  <div class="layer" data-depth="fore" data-factor="1"></div>
+
+  <div class="vignette-radial"></div>
+  <div class="vignette-linear"></div>
+
+  <nav class="nav">
+    <div class="brand">
+      <span class="brand-dot"></span>
+      <span class="brand-name">InfinitySpace</span>
+    </div>
+    <div class="status-pill">Coming Soon</div>
+  </nav>
+
+  <main class="hero">
+    <div class="kicker">Procedurally generated · Top-down · Survival shooter</div>
+
+    <h1 class="headline">Worlds that never end.</h1>
+
+    <p class="subhead">A top-down survival space shooter for Android. Fight through procedurally
+      generated sectors, scavenge ship parts to stay fueled and armed, and push as deep as you
+      can before the next sector ends you.</p>
+
+    <div class="cta-row">
+      <div class="cta-pill">Coming Soon</div>
+    </div>
+  </main>
+
+  <div class="drag-hint">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9l-3 3 3 3M9 5l3-3 3 3M15 19l-3 3-3-3M19 9l3 3-3 3M2 12h20M12 2v20"/></svg>
+    <span>Drag to explore the sector</span>
+  </div>
+
+  <footer class="stats">
+    <div class="stat">
+      <div class="stat-value">∞</div>
+      <div class="stat-label">Procedural sectors</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <div class="stat-value">2D</div>
+      <div class="stat-label">Top-down survival</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <div class="stat-value">Android</div>
+      <div class="stat-label">Built for mobile</div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="background.js"></script>
+</body>
+</html>
