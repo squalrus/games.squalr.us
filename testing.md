@@ -30,6 +30,14 @@ See also: [Xbox release plan](xbox.md).
 
 See also: [Steam release plan](steam.md).
 
+## GOG
+
+- **No special account needed for basic testing** — same Windows Standalone `.exe` build as Steam, run directly on any PC.
+- Specifically verify the build runs with **no GOG Galaxy client installed at all** — DRM-free is GOG's core requirement, so confirm nothing in the build silently expects a Galaxy/Steamworks dependency to be present if Steam integration work happens first.
+- No partner-side beta/testing tooling to evaluate yet since this platform isn't even confirmed as accepting the title — see [GOG](gog.md). Treat this as "verify the same Windows build works standalone," not a platform-specific test pass.
+
+See also: [GOG release plan](gog.md).
+
 ## Nintendo Switch
 
 - **This is the one platform where you cannot test without paid hardware.** There is no public "developer mode" for retail Switch consoles the way Xbox has Dev Mode. You must be an approved Nintendo developer and purchase an official **Switch dev kit** to run and test any build at all — there's no sideloading path on consumer hardware.
