@@ -1,10 +1,16 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SiteFooter from '../components/SiteFooter.jsx';
+import { useSeo } from '../lib/seo.js';
 
 export default function Privacy() {
+  useSeo({
+    title: 'Privacy Policy — Infinity Space',
+    description: "Infinity Space's privacy policy: what data the game collects (none beyond what you send us directly) and how it's used.",
+    path: '/privacy',
+  });
+
   useEffect(() => {
-    document.title = 'Privacy Policy — Infinity Space';
     document.body.classList.add('legal-page');
     return () => document.body.classList.remove('legal-page');
   }, []);

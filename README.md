@@ -39,5 +39,14 @@ Outputs static files to `dist/`, which is what the Azure Static Web Apps deploy 
 | `src/components/StarfieldBackground.jsx` | Mounts the procedural starfield canvas behind the landing page |
 | `src/components/SiteFooter.jsx` | Shared publisher/legal footer (SQUALRUS GAMES LLC, `games@squalr.us`), used on every page |
 | `src/lib/starfield.js` | Procedural nebula/galaxy canvas generator + parallax drag/drift camera |
+| `src/lib/seo.js` | `useSeo()` hook — sets per-route title, meta description, OG/Twitter description, and canonical URL |
 | `src/style.css` | Layout, typography, animations |
 | `staticwebapp.config.json` | Azure Static Web Apps SPA fallback so React Router routes survive a hard refresh |
+| `public/robots.txt` | Allows all crawlers, points to `sitemap.xml` |
+| `public/sitemap.xml` | Static sitemap listing `/`, `/privacy`, `/support`. Update by hand if routes change — not generated at build time |
+
+## SEO
+
+- `index.html` carries the global `<meta>`/Open Graph/Twitter Card defaults plus `VideoGame` JSON-LD structured data; `src/lib/seo.js`'s `useSeo()` hook overrides title/description/canonical per route on top of that baseline.
+- No `og:image`/social preview image exists yet — there's no logo/key art asset to point at (see [Logo and Icon Design](../BACKLOG.md#logo-and-icon-design)). Add `og:image`/`twitter:image` meta tags once one ships.
+- `public/robots.txt` and `public/sitemap.xml` are static files served as-is by Vite/Azure Static Web Apps — `staticwebapp.config.json`'s SPA fallback explicitly excludes `.txt`/`.xml` so they aren't rewritten to `index.html`.

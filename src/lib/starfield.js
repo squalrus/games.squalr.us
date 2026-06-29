@@ -218,6 +218,7 @@ export function initStarfield() {
   raf = requestAnimationFrame(loop);
 
   function onPointerDown(e) {
+    if (e.target.closest('a, button')) return;
     dragging = true;
     px = e.clientX;
     py = e.clientY;

@@ -1,10 +1,16 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SiteFooter from '../components/SiteFooter.jsx';
+import { useSeo } from '../lib/seo.js';
 
 export default function Support() {
+  useSeo({
+    title: 'Support — Infinity Space',
+    description: 'Need help with Infinity Space or found a bug? Contact SQUALRUS GAMES support.',
+    path: '/support',
+  });
+
   useEffect(() => {
-    document.title = 'Support — Infinity Space';
     document.body.classList.add('legal-page');
     return () => document.body.classList.remove('legal-page');
   }, []);

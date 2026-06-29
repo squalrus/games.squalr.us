@@ -1,26 +1,22 @@
-import { useEffect } from 'react';
 import StarfieldBackground from '../components/StarfieldBackground.jsx';
 import SiteFooter from '../components/SiteFooter.jsx';
+import { useSeo } from '../lib/seo.js';
 
 export default function Home() {
-  useEffect(() => {
-    document.title = 'Infinity Space — Coming Soon';
-  }, []);
+  useSeo({
+    title: 'Infinity Space — Coming Soon',
+    description: 'A top-down survival space shooter with procedurally generated sectors. Fight, scavenge, and push as deep as you can.',
+    path: '/',
+  });
 
   return (
     <StarfieldBackground>
-      <nav className="nav">
-        <div className="brand">
-          <span className="brand-dot"></span>
-          <span className="brand-name">Infinity Space</span>
-        </div>
-        <div className="status-pill">Coming Soon</div>
-      </nav>
-
       <main className="hero">
         <div className="kicker">Procedurally generated · Top-down · Survival shooter</div>
 
-        <h1 className="headline">Worlds that never end.</h1>
+        <h1 className="headline">Infinity Space</h1>
+
+        <p className="tagline">Worlds that never end.</p>
 
         <p className="subhead">
           A top-down survival space shooter coming to Android, Xbox, and Steam (all TBD). Fight
