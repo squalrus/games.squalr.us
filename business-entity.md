@@ -19,21 +19,21 @@ Given the plan is to pursue **all four platforms**, including Switch where Ninte
 
 ## Current Status
 
-- **Entity:** LLC formation is **pending** — **SQUALRUS GAMES LLC**, filing with Washington state.
+- **Entity:** **SQUALRUS GAMES LLC**, Washington state — **UBI: 606 247 794** — **EIN: 42-3540454**.
 - **Primary contact:** `games@squalr.us` (already a dedicated business address, not a personal inbox).
 - **Public developer/publisher name:** SQUALRUS GAMES.
 
 | Account | Link | Cost | Status |
 |---|---|---|---|
-| Washington Corp Filing | <https://ccfs.sos.wa.gov/> | $200 | Pending |
+| Washington Corp Filing | <https://ccfs.sos.wa.gov/> | $200 | **Done** — UBI 606 247 794 |
 | Nintendo Developer Portal | <https://developer.nintendo.com/> | — | Registered |
 | Xbox (Microsoft Partner Center) | <https://developer.microsoft.com/en-US/games/publish/id/welcome> | $0 | Registered |
 
 **Action items if you proceed with an LLC:**
 
 1. Choose a formation state (your home state is usually simplest/cheapest unless you have a specific reason for Delaware/Wyoming). — **Done: Washington.**
-2. File articles of organization, pay the state fee. — **In progress** (filing pending via the Washington Corp Filing link above).
-3. Get an EIN from the IRS (free, instant online).
+2. File articles of organization, pay the state fee. — **Done** (UBI 606 247 794, Washington).
+3. Get an EIN from the IRS (free, instant online). — **Done** (EIN 42-3540454).
 4. Open a business bank account.
 5. Get a dedicated business email — every storefront below asks for a public support/contact email. — **Done: `games@squalr.us`.**
 6. Decide a public "developer/publisher name" — this is what appears on all four storefronts. — **Done: SQUALRUS GAMES.**
