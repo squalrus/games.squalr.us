@@ -2,6 +2,12 @@
 
 User-visible changes, newest first. Follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) format and [semver](https://semver.org/) versioning.
 
+## [0.1.1] — 2026-09-22
+
+### Fixed
+
+- **Deprecated checkout action in deploy workflow.** Bumped `actions/checkout` from v3 to v4 in the Azure Static Web Apps CI/CD workflow, resolving a Node.js 20 deprecation warning on GitHub-hosted runners. (`.github/workflows/azure-static-web-apps-jolly-cliff-050e71a1e.yml`)
+
 ## [0.1.0] — 2026-09-22
 
 ### Added
