@@ -1,18 +1,22 @@
-# Infinity Space — Marketing Site
+# Squalrus Games — Marketing Site
 
-A "coming soon" marketing site for Infinity Space, built as a small React + React Router single-page app (Vite). Lives outside `Assets/`, so it's never picked up by the Unity build.
+The marketing site for Squalrus Games' titles, built as a small React + React Router single-page app (Vite). A single homepage with a section per game — currently Infinity Space and Chogots — plus shared Privacy/Support pages covering every title.
 
-The animated starfield background is generated entirely on `<canvas>` at load time (`src/lib/starfield.js`) — no image assets to ship. Drag to pan; it idles with a slow auto-drift otherwise. It only mounts on the landing page.
+The animated starfield background is generated entirely on `<canvas>` at load time (`src/lib/starfield.js`) — no image assets to ship. Drag to pan; it idles with a slow auto-drift otherwise. It only mounts on the landing page, which scrolls independently over the fixed background (`.home-page` in `src/style.css`) so more game sections can be added without needing their own routes.
 
 ## Routes
 
 | Path | Page |
 |---|---|
-| `/` | Coming-soon landing page |
-| `/privacy` | Privacy policy — hosted here for store listing submission (Google Play, Microsoft Partner Center, Steamworks, Nintendo Developer Portal all require a public URL) |
-| `/support` | Support/contact page — hosted here for the same store listing requirement |
+| `/` | Homepage — a Squalrus Games header, then one section per game |
+| `/privacy` | Privacy policy, covering every Squalrus Games title — hosted here for store listing submission (Google Play, Microsoft Partner Center, Steamworks, Nintendo Developer Portal all require a public URL) |
+| `/support` | Support/contact page, covering every title — hosted here for the same store listing requirement |
 
 React Router renders these as clean paths (no `.html`, no hash). Azure Static Web Apps needs `staticwebapp.config.json`'s `navigationFallback` to serve `index.html` for any of these paths on a direct load/refresh, since there's no server-side route for them.
+
+## Adding a new game to the homepage
+
+Add a `<section className="game-section" id="...">` block to `src/pages/Home.jsx` (kicker, headline, tagline, subhead, CTA pill, optional `.stats` row — copy the Chogots section as a template), separated from the previous section by a `<div className="section-divider">`. No routing changes needed — everything lives on `/`. Privacy/Support already speak generically about "our games," so they don't need per-game edits unless a new title's data practices actually differ (accounts, ads, IAP, etc.).
 
 ## Develop locally
 
@@ -33,10 +37,10 @@ Outputs static files to `dist/`, which is what the Azure Static Web Apps deploy 
 
 | File | Purpose |
 |---|---|
-| `src/pages/Home.jsx` | Landing page structure and copy |
-| `src/pages/Privacy.jsx` | Privacy policy route |
-| `src/pages/Support.jsx` | Support/contact route |
-| `src/components/StarfieldBackground.jsx` | Mounts the procedural starfield canvas behind the landing page |
+| `src/pages/Home.jsx` | Homepage structure and copy — Squalrus Games header plus one section per game |
+| `src/pages/Privacy.jsx` | Privacy policy route, covering all games |
+| `src/pages/Support.jsx` | Support/contact route, covering all games |
+| `src/components/StarfieldBackground.jsx` | Mounts the procedural starfield canvas behind the homepage |
 | `src/components/SiteFooter.jsx` | Shared publisher/legal footer (SQUALRUS GAMES LLC, `games@squalr.us`), used on every page |
 | `src/lib/starfield.js` | Procedural nebula/galaxy canvas generator + parallax drag/drift camera |
 | `src/lib/seo.js` | `useSeo()` hook — sets per-route title, meta description, OG/Twitter description, and canonical URL |
@@ -47,6 +51,6 @@ Outputs static files to `dist/`, which is what the Azure Static Web Apps deploy 
 
 ## SEO
 
-- `index.html` carries the global `<meta>`/Open Graph/Twitter Card defaults plus `VideoGame` JSON-LD structured data; `src/lib/seo.js`'s `useSeo()` hook overrides title/description/canonical per route on top of that baseline.
-- No `og:image`/social preview image exists yet — there's no logo/key art asset to point at (see [Logo and Icon Design](../BACKLOG.md#logo-and-icon-design)). Add `og:image`/`twitter:image` meta tags once one ships.
+- `index.html` carries the global `<meta>`/Open Graph/Twitter Card defaults (an `Organization` JSON-LD block for Squalrus Games, plus one `VideoGame` JSON-LD block per game); `src/lib/seo.js`'s `useSeo()` hook overrides title/description/canonical per route on top of that baseline.
+- No `og:image`/social preview image exists yet — neither game has shipped key art. Infinity Space has a tracked backlog item for this (see [Logo and Icon Design](https://github.com/squalrus/infinity-space/blob/main/BACKLOG.md#logo-and-icon-design) in its own repo); Chogots doesn't yet. Add `og:image`/`twitter:image` meta tags once art ships for a game.
 - `public/robots.txt` and `public/sitemap.xml` are static files served as-is by Vite/Azure Static Web Apps — `staticwebapp.config.json`'s SPA fallback explicitly excludes `.txt`/`.xml` so they aren't rewritten to `index.html`.

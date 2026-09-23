@@ -1,7 +1,10 @@
 import { useEffect } from 'react';
 import { initStarfield } from '../lib/starfield.js';
 
-export default function StarfieldBackground({ children }) {
+// Fills its nearest positioned ancestor (e.g. a `.panel`) with the procedural
+// drag/drift starfield. Renders only the background layers — panel content is
+// a sibling, not a child, so it isn't dragged along with the background.
+export default function StarfieldBackground() {
   useEffect(() => {
     const cleanup = initStarfield();
     return cleanup;
@@ -16,8 +19,6 @@ export default function StarfieldBackground({ children }) {
 
       <div className="vignette-radial"></div>
       <div className="vignette-linear"></div>
-
-      {children}
     </div>
   );
 }
