@@ -4,7 +4,7 @@
 
 This is the canonical reference for marketing/store copy: name, tagline, descriptions at various lengths, genre/tags, asset references, and legal links. When writing a store listing, press kit, or any external-facing text, pull from here rather than re-deriving it — and if you change the copy somewhere external (a store listing, the marketing site), update this file to match so it stays the single source of truth.
 
-The current canonical headline/subhead below are live today on the marketing site (`Site/src/pages/Home.jsx`) — keep this file and that page in sync; if one changes, update the other.
+The current canonical headline/subhead below are live today on the marketing site (`src/pages/Home.jsx`) — keep this file and that page in sync; if one changes, update the other.
 
 ## Names
 
@@ -46,7 +46,7 @@ The current canonical headline/subhead below are live today on the marketing sit
 
 - **Primary genre:** Survival, Shooter
 - **Secondary tags:** Top-down, Space, Arcade, Procedural Generation, Roguelite-adjacent (run-based, not a full roguelike — no permadeath meta yet)
-- **Comparable framing:** "top-down survival space shooter" is the phrase used consistently across the marketing site, [README.md](../README.md), and [DESIGN_DOCUMENT.md](../DESIGN_DOCUMENT.md) — keep using it rather than introducing a new genre framing per platform.
+- **Comparable framing:** "top-down survival space shooter" is the phrase used consistently across the marketing site, [README.md](https://github.com/squalrus/infinity-space/blob/main/README.md), and [DESIGN_DOCUMENT.md](https://github.com/squalrus/infinity-space/blob/main/DESIGN_DOCUMENT.md) — keep using it rather than introducing a new genre framing per platform.
 
 ## Core Pillars (for any "why should I care" pitch — e.g. Xbox's "the hook" question, see [Xbox: Game Concept Questions](xbox.md#game-concept-questions))
 
@@ -60,7 +60,7 @@ The current canonical headline/subhead below are live today on the marketing sit
 - **Privacy policy:** <https://games.squalr.us/privacy>
 - **Support / contact:** <https://games.squalr.us/support> (routes to `games@squalr.us`)
 - Both are required metadata fields on every storefront in [the release plan](README.md) — paste these exact URLs rather than re-typing or guessing a path.
-- Per the live privacy policy: Infinity Space does not require an account and does not collect personal information; progress/statistics save locally on-device only. This is a genuine selling point for privacy-conscious players and a true statement for any store's data-safety questionnaire (Android's Data Safety form, etc.) — **keep this file's claim and the actual code in sync**: if cloud save/leaderboards ([Connected Service for Cloud Saving and Leaderboards](../BACKLOG.md#connected-service-for-cloud-saving-and-leaderboards)) or ads/analytics ever ship, this paragraph and the live privacy policy both need to be rewritten before the next release.
+- Per the live privacy policy: Infinity Space does not require an account and does not collect personal information; progress/statistics save locally on-device only. This is a genuine selling point for privacy-conscious players and a true statement for any store's data-safety questionnaire (Android's Data Safety form, etc.) — **keep this file's claim and the actual code in sync**: if cloud save/leaderboards ([Connected Service for Cloud Saving and Leaderboards](https://github.com/squalrus/infinity-space/blob/main/BACKLOG.md#connected-service-for-cloud-saving-and-leaderboards)) or ads/analytics ever ship, this paragraph and the live privacy policy both need to be rewritten before the next release.
 
 ## Asset References
 
@@ -68,10 +68,10 @@ Source art lives outside this file — link to it rather than duplicating binari
 
 | Asset | Location | Status |
 |---|---|---|
-| Icon/UI glyph set | [Infinity Space Icons on Behance](https://www.behance.net/gallery/12721009/Infinity-Space-Icons) (license verification in progress — see [Verify Infinity Icons HU Font License](../BACKLOG.md#verify-infinity-icons-hu-font-license)) | In use, unresolved license |
-| Title logo / app icon | None yet — see [Logo and Icon Design](../BACKLOG.md#logo-and-icon-design) | Not started |
+| Icon/UI glyph set | [Infinity Space Icons on Behance](https://www.behance.net/gallery/12721009/Infinity-Space-Icons) (license verification in progress — see [Verify Infinity Icons HU Font License](https://github.com/squalrus/infinity-space/blob/main/BACKLOG.md#verify-infinity-icons-hu-font-license)) | In use, unresolved license |
+| Title logo / app icon | None yet — see [Logo and Icon Design](https://github.com/squalrus/infinity-space/blob/main/BACKLOG.md#logo-and-icon-design) | Not started |
 | Source art files | `Design/` (`.afdesign`) | — |
-| Marketing site source | `Site/src/pages/Home.jsx` (hero copy), `SiteFooter.jsx` (footer/legal links) | Live |
+| Marketing site source | `src/pages/Home.jsx` (hero copy), `SiteFooter.jsx` (footer/legal links) | Live |
 | Screenshots / key art for store listings | Not yet captured — none of the per-platform docs in this folder have real screenshots staged | Not started |
 
 ## Platform Availability (keep in sync with `Home.jsx`'s footer stat block)

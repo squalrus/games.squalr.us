@@ -10,10 +10,10 @@
 
 ## Required Build Work (ties to backlog)
 
-- [Investigate Release on Steam](../BACKLOG.md#investigate-release-on-steam) — build Windows Standalone (x86_64), the same build target [Investigate Release on Windows and Xbox](../BACKLOG.md#investigate-release-on-windows-and-xbox) covers, so this should be sequenced alongside or right after that work rather than redone from scratch.
+- [Investigate Release on Steam](https://github.com/squalrus/infinity-space/blob/main/BACKLOG.md#investigate-release-on-steam) — build Windows Standalone (x86_64), the same build target [Investigate Release on Windows and Xbox](https://github.com/squalrus/infinity-space/blob/main/BACKLOG.md#investigate-release-on-windows-and-xbox) covers, so this should be sequenced alongside or right after that work rather than redone from scratch.
 - Integrate a Steamworks SDK wrapper for Unity — **Steamworks.NET** or **Facepunch.Steamworks** are the two common community wrappers (Valve doesn't ship an official Unity package); pick one and wire up `SteamAPI_Init()` at startup.
 - Local testing requires a `steam_appid.txt` file alongside the build (placeholder app ID before your real one is approved); production builds bake the real App ID in via Steamworks' build/depot tools instead.
-- Verify mouse/keyboard input alongside the existing gamepad-first Input System setup, since Steam players expect both to work — this project's `GamepadUiNavigation.cs` menu flow (see [CLAUDE.md](../CLAUDE.md)) was built gamepad-first and should be spot-checked with mouse/keyboard on PC.
+- Verify mouse/keyboard input alongside the existing gamepad-first Input System setup, since Steam players expect both to work — this project's `GamepadUiNavigation.cs` menu flow (see [CLAUDE.md](https://github.com/squalrus/infinity-space/blob/main/CLAUDE.md)) was built gamepad-first and should be spot-checked with mouse/keyboard on PC.
 
 ## Store Assets Required
 

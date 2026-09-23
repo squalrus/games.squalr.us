@@ -16,7 +16,7 @@ Two distinct programs exist — pick one:
 
 ## Required Build Work (ties to backlog)
 
-- [Investigate Release on Windows and Xbox](../BACKLOG.md#investigate-release-on-windows-and-xbox) is still "exploratory" in the backlog — this needs to happen before any submission: verify Input System gamepad bindings work on Xbox controllers, verify UI Toolkit renders correctly at console-safe resolutions/TV-safe areas, and test performance at 1080p/4K depending on target Xbox SKU (Series S vs Series X). This same Windows Standalone build work is also the prerequisite for [Steam](steam.md) — sequence Xbox and Steam together rather than redoing the Windows build validation twice.
+- [Investigate Release on Windows and Xbox](https://github.com/squalrus/infinity-space/blob/main/BACKLOG.md#investigate-release-on-windows-and-xbox) is still "exploratory" in the backlog — this needs to happen before any submission: verify Input System gamepad bindings work on Xbox controllers, verify UI Toolkit renders correctly at console-safe resolutions/TV-safe areas, and test performance at 1080p/4K depending on target Xbox SKU (Series S vs Series X). This same Windows Standalone build work is also the prerequisite for [Steam](steam.md) — sequence Xbox and Steam together rather than redoing the Windows build validation twice.
 
 ## Game Concept Questions
 

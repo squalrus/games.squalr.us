@@ -11,7 +11,7 @@
 
 ## Required Build Work (ties to backlog)
 
-- [Investigate Release on Nintendo Switch](../BACKLOG.md#investigate-release-on-nintendo-switch) — investigate Joy-Con/Pro Controller mapping via the existing Input System setup, docked vs. handheld resolution/performance targets, and Nintendo's certification (lotcheck) process, which checks for platform-specific UX requirements (e.g., proper handling of suspend/resume, button prompt conventions matching Nintendo's button layout, save data requirements).
+- [Investigate Release on Nintendo Switch](https://github.com/squalrus/infinity-space/blob/main/BACKLOG.md#investigate-release-on-nintendo-switch) — investigate Joy-Con/Pro Controller mapping via the existing Input System setup, docked vs. handheld resolution/performance targets, and Nintendo's certification (lotcheck) process, which checks for platform-specific UX requirements (e.g., proper handling of suspend/resume, button prompt conventions matching Nintendo's button layout, save data requirements).
 - Nintendo lotcheck is stricter than Google/Microsoft's automated review — budget real QA time for it, and expect at least one rejection-and-resubmission cycle on a first title.
 
 ## Store Assets Required
@@ -33,7 +33,7 @@
 
 This is the platform where the premise of the question changes: **Nintendo does not expose a broadly available, self-serve, third-party achievements/leaderboards API the way Google (Play Games Services), Microsoft (Xbox Live), and Valve (Steamworks) do.** There is no public "Nintendo Achievements SDK" indie developers can plug into for Switch the way they can for Android, Xbox, or Steam. Some first-party/large-studio titles have proprietary integrations, but it is not a standard self-serve offering for an indie release.
 
-**Practical implication:** for Switch, you will need a **custom backend** for any cross-run stats, leaderboards, or achievement-style tracking — there's no platform-native account system to hang it on. This pulls forward the backlog's [Connected Service for Cloud Saving and Leaderboards](../BACKLOG.md#connected-service-for-cloud-saving-and-leaderboards) item: services like **Unity Gaming Services (Leaderboards + Cloud Save)**, **PlayFab**, or **Firebase** all support Switch via the engine SDK rather than a platform identity provider, typically using an anonymous device-bound or email-based account you control, not Nintendo's account system.
+**Practical implication:** for Switch, you will need a **custom backend** for any cross-run stats, leaderboards, or achievement-style tracking — there's no platform-native account system to hang it on. This pulls forward the backlog's [Connected Service for Cloud Saving and Leaderboards](https://github.com/squalrus/infinity-space/blob/main/BACKLOG.md#connected-service-for-cloud-saving-and-leaderboards) item: services like **Unity Gaming Services (Leaderboards + Cloud Save)**, **PlayFab**, or **Firebase** all support Switch via the engine SDK rather than a platform identity provider, typically using an anonymous device-bound or email-based account you control, not Nintendo's account system.
 
 **This also means:** if you want one consistent leaderboard/achievement experience across Android + Xbox + Steam + Switch, the unified version has to be the custom backend on all four — using each platform's native system only gets you same-platform-only leaderboards, and Switch can't participate in a "native" leaderboard at all. See [Cross-Platform Achievements/Leaderboards](achievements.md).
 

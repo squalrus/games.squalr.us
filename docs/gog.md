@@ -12,7 +12,7 @@
 
 ## Required Build Work (ties to backlog)
 
-- [Investigate Release on GOG](../BACKLOG.md#investigate-release-on-gog) — reuses the same Windows Standalone (x86_64) build as [Steam](steam.md) and [Xbox](xbox.md); no separate build target needed. Sequence this after that build validation work is already done for Steam, not before.
+- [Investigate Release on GOG](https://github.com/squalrus/infinity-space/blob/main/BACKLOG.md#investigate-release-on-gog) — reuses the same Windows Standalone (x86_64) build as [Steam](steam.md) and [Xbox](xbox.md); no separate build target needed. Sequence this after that build validation work is already done for Steam, not before.
 - **DRM-free requirement:** the build must run standalone without requiring any GOG client to be installed or running — this is GOG's core brand promise to players. Since this project has no DRM/license-check code to begin with, this is likely a non-issue, but verify nothing platform-specific (Steamworks calls, achievement SDK calls) accidentally hard-fails when that SDK isn't present, if Steam integration work happens first.
 - **GOG Galaxy SDK integration is optional**, not required to list. Skip it for an initial submission; only revisit if GOG-native achievements/cloud saves become a priority later.
 

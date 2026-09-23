@@ -10,7 +10,7 @@
 
 ## Required Build Work (ties to backlog)
 
-- [Investigate Release on Android](../BACKLOG.md#investigate-release-on-android) — generate a release keystore, configure **Player Settings → Publishing Settings**, decide upload key vs. Play App Signing (Play App Signing is Google's current default/recommended — Google holds the app signing key, you keep an upload key).
+- [Investigate Release on Android](https://github.com/squalrus/infinity-space/blob/main/BACKLOG.md#investigate-release-on-android) — generate a release keystore, configure **Player Settings → Publishing Settings**, decide upload key vs. Play App Signing (Play App Signing is Google's current default/recommended — Google holds the app signing key, you keep an upload key).
 - Target API level must meet Google's current minimum (Play Console enforces a rolling minimum `targetSdkVersion`, typically the latest Android version minus one, at upload time — check the current requirement in Play Console before building).
 
 ## Store Assets Required
