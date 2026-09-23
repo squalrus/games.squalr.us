@@ -1,46 +1,32 @@
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import SiteFooter from '../components/SiteFooter.jsx';
 import { useSeo } from '../lib/seo.js';
 
 export default function Support() {
   useSeo({
-    title: 'Support — Infinity Space',
-    description: 'Need help with Infinity Space or found a bug? Contact SQUALRUS GAMES support.',
+    title: 'Support — Squalrus Games',
+    description: 'Need help with an Infinity Space, Chogots, or another Squalrus Games title? Contact SQUALRUS GAMES support.',
     path: '/support',
   });
 
-  useEffect(() => {
-    document.body.classList.add('legal-page');
-    return () => document.body.classList.remove('legal-page');
-  }, []);
-
   return (
-    <>
-      <Link className="back-link" to="/">&larr; Infinity Space</Link>
+    <article className="doc">
+      <h1>Support</h1>
+      <p className="updated">SQUALRUS GAMES LLC</p>
 
-      <article className="doc">
-        <h1>Support</h1>
-        <p className="updated">SQUALRUS GAMES LLC</p>
+      <p>Need help with one of our games, found a bug, or have feedback? Email us at <a href="mailto:games@squalr.us">games@squalr.us</a> — let us know which game you're writing about — and we'll get back to you.</p>
 
-        <p>Need help with Infinity Space, found a bug, or have feedback? Email us at <a href="mailto:games@squalr.us">games@squalr.us</a> and we'll get back to you.</p>
+      <h2>When reporting a problem</h2>
+      <p>Including the following helps us track down issues faster:</p>
+      <ul>
+        <li>Which game you're playing (Infinity Space, Chogots, etc.)</li>
+        <li>Your device model and OS version</li>
+        <li>The app version, if shown in the game's menus</li>
+        <li>What you were doing when the problem happened</li>
+        <li>A screenshot or screen recording, if possible</li>
+      </ul>
 
-        <h2>When reporting a problem</h2>
-        <p>Including the following helps us track down issues faster:</p>
-        <ul>
-          <li>Your device model and OS version</li>
-          <li>The app version (shown on the main menu / pause menu)</li>
-          <li>What you were doing when the problem happened</li>
-          <li>A screenshot or screen recording, if possible</li>
-        </ul>
-
-        <h2>Privacy</h2>
-        <p>See our <Link to="/privacy">Privacy Policy</Link> for details on what data the game collects (in short: none beyond what you send us directly).</p>
-      </article>
-
-      <footer className="site-footer">
-        <SiteFooter />
-      </footer>
-    </>
+      <h2>Privacy</h2>
+      <p>See our <Link to="/privacy">Privacy Policy</Link> for details on what data our games collect (in short: none beyond what you send us directly).</p>
+    </article>
   );
 }

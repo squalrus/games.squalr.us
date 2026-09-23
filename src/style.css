@@ -1,13 +1,20 @@
+:root {
+  --header-h: 52px;
+}
+
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100%;
   background: #040e12;
-  overflow: hidden;
 }
 
 * {
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
 }
 
 @keyframes fadein {
@@ -25,14 +32,90 @@ html, body {
   50% { box-shadow: 0 14px 44px rgba(64, 220, 200, 0.7); }
 }
 
-.bg-root {
+@keyframes pixel-drift {
+  from { background-position: 0 0; }
+  to { background-position: 512px 512px; }
+}
+
+/* ── Thin header (every page) ── */
+
+.site-header-bar {
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--header-h);
+  padding: 0 clamp(16px, 5vw, 24px);
+  background: rgba(4, 14, 18, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(180, 230, 224, 0.08);
+}
+
+.brand-mark {
+  font: 600 13px/1 'Space Grotesk', sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #eafaf6;
+  text-decoration: none;
+}
+
+.brand-mark:hover {
+  color: oklch(0.82 0.1 195);
+}
+
+/* ── Homepage panels ── */
+
+.panels {
+  padding-top: var(--header-h);
+}
+
+.panel {
+  position: relative;
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  padding: clamp(24px, 6vh, 48px) clamp(18px, 5vw, 24px);
+  scroll-margin-top: var(--header-h);
+}
+
+.panel--brand {
+  background: radial-gradient(ellipse 70% 60% at 50% 30%, rgba(64, 220, 200, 0.14), transparent 65%), #040e12;
+}
+
+.panel--infinity-space {
+  background: #040e12;
+}
+
+.panel--chogots {
+  background: rgb(244, 233, 214);
+  color: rgb(58, 42, 30);
+}
+
+.panel-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Infinity Space starfield background ── */
+
+.bg-root {
+  position: absolute;
   inset: 0;
   background: #040e12;
   cursor: grab;
-  font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
   user-select: none;
-  touch-action: none;
+  touch-action: pan-y;
 }
 
 .bg-root.dragging {
@@ -68,19 +151,18 @@ html, body {
   background: linear-gradient(to bottom, rgba(4, 12, 16, 0.5) 0%, transparent 22%, transparent 72%, rgba(4, 10, 14, 0.78) 100%);
 }
 
-/* ── Hero ── */
+/* ── Chogots pixel-art background ── */
 
-.hero {
+.pixel-bg {
   position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 clamp(18px, 5vw, 24px) clamp(8vh, 14vh, 14vh);
-  pointer-events: none;
+  inset: -64px;
+  background-repeat: repeat;
+  background-size: 64px 64px;
+  image-rendering: pixelated;
+  animation: pixel-drift 40s linear infinite;
 }
+
+/* ── Section content (kicker, headline, tagline, subhead, CTA) ── */
 
 .kicker {
   font: 500 clamp(10px, 2.6vw, 12px)/1.3 ui-monospace, 'SF Mono', Menlo, monospace;
@@ -95,7 +177,7 @@ html, body {
 .headline {
   margin: 0;
   max-width: 16ch;
-  font: 600 clamp(44px, 7.4vw, 104px)/0.98 'Space Grotesk', sans-serif;
+  font: 600 clamp(40px, 7vw, 96px)/0.98 'Space Grotesk', sans-serif;
   letter-spacing: -0.025em;
   color: #f3fffb;
   text-shadow: 0 4px 60px oklch(0.7 0.13 195 / 0.45);
@@ -139,11 +221,47 @@ html, body {
   animation: glow 2.6s ease-in-out infinite;
 }
 
-.drag-hint {
-  position: absolute;
-  bottom: calc(96px + env(safe-area-inset-bottom, 0px));
-  left: 50%;
-  transform: translateX(-50%);
+/* ── Panel-specific text theming ── */
+
+.panel--chogots .kicker {
+  color: rgb(180, 90, 60);
+}
+
+.panel--chogots .headline {
+  color: rgb(58, 42, 30);
+  text-shadow: none;
+}
+
+.panel--chogots .tagline {
+  color: rgba(58, 42, 30, 0.85);
+}
+
+.panel--chogots .subhead {
+  color: rgba(58, 42, 30, 0.68);
+}
+
+.panel--chogots .cta-pill {
+  background: rgb(58, 42, 30);
+  color: rgb(244, 233, 214);
+  animation: none;
+  box-shadow: 0 10px 24px rgba(58, 42, 30, 0.25);
+}
+
+.panel--chogots .stat-value {
+  color: rgb(58, 42, 30);
+}
+
+.panel--chogots .stat-label {
+  color: rgba(58, 42, 30, 0.55);
+}
+
+.panel--chogots .stat-divider {
+  background: rgba(58, 42, 30, 0.18);
+}
+
+/* ── Hints (scroll / drag affordances) ── */
+
+.hint {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -152,24 +270,30 @@ html, body {
   animation: pulse 2.6s ease-in-out infinite;
 }
 
-.drag-hint span {
+.hint span {
   font: 500 12px/1 ui-monospace, monospace;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 
-/* ── Footer stats ── */
-
-.site-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  animation: fadein 0.9s ease 0.4s both;
+.scroll-hint {
+  margin-top: 44px;
 }
+
+.drag-hint {
+  position: absolute;
+  bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 420px), (max-height: 480px) {
+  .drag-hint {
+    display: none;
+  }
+}
+
+/* ── Stats row ── */
 
 .stats {
   display: flex;
@@ -203,13 +327,16 @@ html, body {
   background: rgba(180, 230, 224, 0.14);
 }
 
-@media (max-width: 420px), (max-height: 480px) {
-  .drag-hint {
-    display: none;
-  }
-}
+/* ── Thin footer (every page) ── */
 
-/* ── Footer legal ── */
+.site-footer {
+  margin-top: 40px;
+  padding-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadein 0.9s ease 0.4s both;
+}
 
 .legal {
   display: flex;
@@ -218,7 +345,6 @@ html, body {
   align-items: center;
   gap: 6px 10px;
   padding: 0 clamp(16px, 5vw, 24px) calc(18px + env(safe-area-inset-bottom, 0px));
-  pointer-events: auto;
   font: 500 clamp(10px, 2.6vw, 11px)/1.6 ui-monospace, monospace;
   letter-spacing: 0.04em;
   color: rgba(200, 234, 228, 0.45);
@@ -246,13 +372,6 @@ html, body {
 }
 
 /* ── Legal pages (privacy/support) ── */
-
-.legal-page {
-  position: static;
-  overflow: auto;
-  height: auto;
-  min-height: 100%;
-}
 
 .doc {
   max-width: 720px;
@@ -294,27 +413,4 @@ html, body {
 
 .doc ul {
   padding-left: 22px;
-}
-
-.back-link {
-  position: absolute;
-  top: calc(22px + env(safe-area-inset-top, 0px));
-  left: clamp(18px, 5vw, 40px);
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font: 600 13px/1 'Space Grotesk', sans-serif;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: rgba(214, 238, 234, 0.7);
-  text-decoration: none;
-}
-
-.back-link:hover {
-  color: #eafaf6;
-}
-
-.legal-page .site-footer {
-  position: static;
-  margin-top: 40px;
 }

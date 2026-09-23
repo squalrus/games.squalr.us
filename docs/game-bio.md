@@ -74,6 +74,6 @@ Source art lives outside this file — link to it rather than duplicating binari
 | Marketing site source | `src/pages/Home.jsx` (hero copy), `SiteFooter.jsx` (footer/legal links) | Live |
 | Screenshots / key art for store listings | Not yet captured — none of the per-platform docs in this folder have real screenshots staged | Not started |
 
-## Platform Availability (keep in sync with `Home.jsx`'s footer stat block)
+## Platform Availability (keep in sync with `Home.jsx`'s Infinity Space section stat row)
 
 Currently stated as **Android, Xbox, Steam — all TBD** on the live marketing site. [GOG](gog.md) is being explored but is not yet confirmed (curated platform, acceptance isn't guaranteed) and should not be added to public-facing copy until a listing is actually secured. [Nintendo Switch](switch.md) is in the release plan but has the longest lead time and similarly shouldn't appear in public copy until closer to confirmed.
