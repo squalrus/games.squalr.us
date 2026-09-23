@@ -2,6 +2,12 @@
 
 User-visible changes, newest first. Follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) format and [semver](https://semver.org/) versioning.
 
+## [0.1.2] — 2026-09-22
+
+### Changed
+
+- **Game bio docs split per game.** `docs/game-bio.md` was Infinity-Space-only despite its generic name; renamed to `docs/game-bio-infinity-space.md` and retitled to make that explicit. Added `docs/game-bio-chogots.md` as the same canonical copy reference (name, taglines, descriptions, genre/tags, core pillars, legal/support links, asset references, platform availability) for Chogots. (`docs/game-bio.md` → `docs/game-bio-infinity-space.md`, `docs/game-bio-chogots.md`, `docs/README.md`)
+
 ## [0.1.1] — 2026-09-22
 
 ### Fixed

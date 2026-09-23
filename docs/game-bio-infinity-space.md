@@ -1,6 +1,6 @@
 [← Release Plan](README.md)
 
-# Game Bio — Source of Truth for Copy
+# Infinity Space — Game Bio (Source of Truth for Copy)
 
 This is the canonical reference for marketing/store copy: name, tagline, descriptions at various lengths, genre/tags, asset references, and legal links. When writing a store listing, press kit, or any external-facing text, pull from here rather than re-deriving it — and if you change the copy somewhere external (a store listing, the marketing site), update this file to match so it stays the single source of truth.
 

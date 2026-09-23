@@ -7,7 +7,7 @@ This is a planning document, not a committed schedule. Treat dollar figures and 
 
 This plan is split across documents in this folder:
 
-- [Game Bio](game-bio.md) — source of truth for name, tagline, short/long descriptions, asset references, legal links
+- [Game Bio](game-bio-infinity-space.md) — source of truth for name, tagline, short/long descriptions, asset references, legal links
 - [Business Entity](business-entity.md) — LLC vs. individual, current registration status
 - [Android](android.md)
 - [Xbox](xbox.md)
