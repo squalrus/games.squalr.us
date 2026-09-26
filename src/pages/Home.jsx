@@ -5,7 +5,7 @@ import { useSeo } from '../lib/seo.js';
 export default function Home() {
   useSeo({
     title: 'Squalrus Games',
-    description: 'Squalrus Games makes small, focused games — currently Infinity Space, a top-down survival space shooter, and Chogots, a pixel-art creature-care game for Android.',
+    description: 'Squalrus Games makes small, focused games — currently Chogots, a pixel-art creature-care game for Android, and Infinity Space, a top-down survival space shooter.',
     path: '/',
   });
 
@@ -30,6 +30,43 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="panel panel--chogots" id="chogots">
+        <PixelBackground />
+
+        <div className="panel-content">
+          <div className="kicker">Pixel-art creature care · Android</div>
+
+          <h2 className="headline">Chogots</h2>
+
+          <p className="tagline">It's probably fine.</p>
+
+          <p className="subhead">
+            A pocket creature-care game with a deadpan sense of humor. Feed it, play Gem Match to
+            keep it happy, and check back later — it'll still be there, mostly fine.
+          </p>
+
+          <div className="cta-row">
+            <div className="cta-pill">Coming Soon</div>
+          </div>
+
+          <div className="stats">
+            <div className="stat">
+              <div className="stat-value">2D</div>
+              <div className="stat-label">Pixel-art creature care</div>
+            </div>
+            <div className="stat-divider"></div>
+            <div className="stat">
+              <div className="stat-value">Match-3</div>
+              <div className="stat-label">Gem Match minigame</div>
+            </div>
+            <div className="stat-divider"></div>
+            <div className="stat">
+              <div className="stat-value">TBD</div>
+              <div className="stat-label">Android</div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="panel panel--infinity-space" id="infinity-space">
         <StarfieldBackground />
 
@@ -74,43 +111,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="panel panel--chogots" id="chogots">
-        <PixelBackground />
-
-        <div className="panel-content">
-          <div className="kicker">Pixel-art creature care · Android</div>
-
-          <h2 className="headline">Chogots</h2>
-
-          <p className="tagline">It's probably fine.</p>
-
-          <p className="subhead">
-            A pocket creature-care game with a deadpan sense of humor. Feed it, play Gem Match to
-            keep it happy, and check back later — it'll still be there, mostly fine.
-          </p>
-
-          <div className="cta-row">
-            <div className="cta-pill">Coming Soon</div>
-          </div>
-
-          <div className="stats">
-            <div className="stat">
-              <div className="stat-value">2D</div>
-              <div className="stat-label">Pixel-art creature care</div>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="stat">
-              <div className="stat-value">Match-3</div>
-              <div className="stat-label">Gem Match minigame</div>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="stat">
-              <div className="stat-value">TBD</div>
-              <div className="stat-label">Android</div>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
   );
 }

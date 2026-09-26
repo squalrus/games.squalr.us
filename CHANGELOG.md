@@ -2,6 +2,26 @@
 
 User-visible changes, newest first. Follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) format and [semver](https://semver.org/) versioning.
 
+## [0.2.0] — 2026-09-25
+
+### Added
+
+- **Header navigation.** The site header now has nav links: Chogots and Infinity Space deep-link to their homepage sections from any page, plus About and Careers. Navigating now scrolls to the linked section, or to the top of a new page. (`src/components/SiteHeader.jsx`, `src/components/Layout.jsx`, `src/style.css`)
+- **About page.** New `/about` page describing the studio — Washington-based, small games, strange ideas, software no one asked for — with a team roster of six roles, all staffed by the same person. (`src/pages/About.jsx`, `public/team/chad.jpg`, `src/App.jsx`)
+- **Careers page.** New `/careers` page: no open positions, but open to collaborators, with a contact link to `games@squalr.us`. (`src/pages/Careers.jsx`, `src/App.jsx`)
+- **Chogots sprites in the background.** The Chogots section background is now an animated canvas: square pixels of varying sizes drifting in different directions, plus creatures, gems, food and toys from the game floating among them, each creature playing one of its in-game animations. Pauses when off screen and respects reduced-motion settings. (`src/lib/pixelfield.js`, `src/components/PixelBackground.jsx`, `public/chogots/`)
+
+### Changed
+
+- **Left-aligned header.** The brand mark now sits at the left of the header instead of centered. (`src/style.css`)
+- **Chogots comes first.** The Chogots section now appears above Infinity Space on the homepage. (`src/pages/Home.jsx`)
+- **Roomier homepage sections.** Each section now fills at least the full viewport height with more padding above and below its content. (`src/style.css`)
+- **Sitemap and README cover the new pages.** (`public/sitemap.xml`, `README.md`)
+
+### Fixed
+
+- **Off-center stats row.** The stats under "Coming Soon" now use equal-width columns, so the middle stat stays centered even when labels differ in length (most visible on Chogots). (`src/style.css`)
+
 ## [0.1.2] — 2026-09-22
 
 ### Changed
