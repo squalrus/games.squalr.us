@@ -2,6 +2,22 @@
 
 User-visible changes, newest first. Follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) format and [semver](https://semver.org/) versioning.
 
+## [0.2.2] — 2026-09-26
+
+### Added
+
+- **Mobile menu.** On screens 640px and narrower, the header nav collapses behind a menu button that opens a full-width dropdown with large tap targets. It closes when you pick a link or press Esc. Previously the nav scrolled sideways with no scrollbar, which hid About and Careers on phones. (`src/components/SiteHeader.jsx`, `src/style.css`)
+
+### Changed
+
+- **Mobile layout pass.** Homepage sections now fit the visible screen under the header, even with mobile browser toolbars showing, and keep clear of the notch in landscape. Paired Chogots buttons stack at equal width on narrow screens, the stats row uses the full width, footer links wrap and are easier to tap, text pages have tighter top padding and wrap long links, and the About team grid shows two columns on phones. (`src/style.css`)
+- **Seattle, Washington.** The About page now says the studio is based in Seattle, Washington. (`src/pages/About.jsx`)
+- **Opinions welcome.** The Careers collaboration section now invites people with strong opinions about the games to get in touch, not just people who make things. (`src/pages/Careers.jsx`)
+
+### Fixed
+
+- **Kicker letter spacing on phones.** The small caps label above each game title got its widest letter spacing on small screens because of a formula bug. It now uses tighter spacing on phones. (`src/style.css`)
+
 ## [0.2.1] — 2026-09-26
 
 ### Added
