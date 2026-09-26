@@ -1,20 +1,12 @@
-import { useEffect, useState } from 'react';
-import { makePixelTile } from '../lib/pixelfield.js';
+import { useEffect, useRef } from 'react';
+import { startPixelField } from '../lib/pixelfield.js';
 
-// Fills its nearest positioned ancestor (e.g. a `.panel`) with a tiled,
-// slowly-drifting pixel-art pattern. Generated once on mount, same approach
-// as StarfieldBackground but static (no drag) since nothing calls for it here.
+// Fills its nearest positioned ancestor (e.g. a `.panel`) with drifting
+// pixel-art squares of varying sizes, each moving in its own direction.
 export default function PixelBackground() {
-  const [url, setUrl] = useState(null);
+  const canvasRef = useRef(null);
 
-  useEffect(() => {
-    setUrl(makePixelTile(64));
-  }, []);
+  useEffect(() => startPixelField(canvasRef.current), []);
 
-  return (
-    <div
-      className="pixel-bg"
-      style={url ? { backgroundImage: `url(${url})` } : undefined}
-    ></div>
-  );
+  return <canvas ref={canvasRef} className="pixel-bg" aria-hidden="true"></canvas>;
 }

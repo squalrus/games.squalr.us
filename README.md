@@ -9,6 +9,8 @@ The animated starfield background is generated entirely on `<canvas>` at load ti
 | Path | Page |
 |---|---|
 | `/` | Homepage — a Squalrus Games header, then one section per game |
+| `/about` | Studio about page, including the team roster (headshots in `public/team/`, set per role via `photo` in `About.jsx`) |
+| `/careers` | Careers page — no openings, open to collaboration via email |
 | `/privacy` | Privacy policy, covering every Squalrus Games title — hosted here for store listing submission (Google Play, Microsoft Partner Center, Steamworks, Nintendo Developer Portal all require a public URL) |
 | `/support` | Support/contact page, covering every title — hosted here for the same store listing requirement |
 
@@ -38,16 +40,19 @@ Outputs static files to `dist/`, which is what the Azure Static Web Apps deploy 
 | File | Purpose |
 |---|---|
 | `src/pages/Home.jsx` | Homepage structure and copy — Squalrus Games header plus one section per game |
+| `src/pages/About.jsx` | About route — studio blurb and team roster |
+| `src/pages/Careers.jsx` | Careers route — collaboration contact |
 | `src/pages/Privacy.jsx` | Privacy policy route, covering all games |
 | `src/pages/Support.jsx` | Support/contact route, covering all games |
 | `src/components/StarfieldBackground.jsx` | Mounts the procedural starfield canvas behind the homepage |
+| `src/components/SiteHeader.jsx` | Fixed header — brand mark plus nav (homepage section deep links, About, Careers) |
 | `src/components/SiteFooter.jsx` | Shared publisher/legal footer (SQUALRUS GAMES LLC, `games@squalr.us`), used on every page |
 | `src/lib/starfield.js` | Procedural nebula/galaxy canvas generator + parallax drag/drift camera |
 | `src/lib/seo.js` | `useSeo()` hook — sets per-route title, meta description, OG/Twitter description, and canonical URL |
 | `src/style.css` | Layout, typography, animations |
 | `staticwebapp.config.json` | Azure Static Web Apps SPA fallback so React Router routes survive a hard refresh |
 | `public/robots.txt` | Allows all crawlers, points to `sitemap.xml` |
-| `public/sitemap.xml` | Static sitemap listing `/`, `/privacy`, `/support`. Update by hand if routes change — not generated at build time |
+| `public/sitemap.xml` | Static sitemap listing `/`, `/about`, `/careers`, `/privacy`, `/support`. Update by hand if routes change — not generated at build time |
 
 ## SEO
 
