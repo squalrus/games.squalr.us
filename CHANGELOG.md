@@ -2,6 +2,12 @@
 
 User-visible changes, newest first. Follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) format and [semver](https://semver.org/) versioning.
 
+## [0.2.1] — 2026-09-26
+
+### Added
+
+- **Chogots tester sign-up.** The Chogots "Coming Soon" pill is replaced by two buttons: "Get the Test Build" opens the Google Play closed-testing page, and "Request to Join" opens an email to `games@squalr.us` for people not yet on the tester list. A short note under the buttons explains that the Play link only works once you're on the list. (`src/pages/Home.jsx`, `src/style.css`)
+
 ## [0.2.0] — 2026-09-25
 
 ### Added
