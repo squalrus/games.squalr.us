@@ -229,6 +229,8 @@ body {
 
 .cta-row {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 14px;
   margin-top: 38px;
   pointer-events: auto;
@@ -243,7 +245,16 @@ body {
   font: 600 clamp(14px, 3vw, 16px)/1 'Space Grotesk', sans-serif;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  text-decoration: none;
   animation: glow 2.6s ease-in-out infinite;
+}
+
+.cta-note {
+  margin: 16px 0 0;
+  max-width: 48ch;
+  font: 400 14px/1.5 'Space Grotesk', sans-serif;
+  color: rgba(214, 238, 234, 0.6);
+  animation: fadein 0.8s ease 0.32s both;
 }
 
 /* ── Panel-specific text theming ── */
@@ -270,6 +281,31 @@ body {
   color: rgb(244, 233, 214);
   animation: none;
   box-shadow: 0 10px 24px rgba(58, 42, 30, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.panel--chogots .cta-pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(58, 42, 30, 0.32);
+}
+
+.panel--chogots .cta-pill--ghost {
+  background: transparent;
+  color: rgb(58, 42, 30);
+  box-shadow: inset 0 0 0 2px rgb(58, 42, 30);
+}
+
+.panel--chogots .cta-pill--ghost:hover {
+  background: rgba(58, 42, 30, 0.08);
+  box-shadow: inset 0 0 0 2px rgb(58, 42, 30);
+}
+
+.panel--chogots .cta-note {
+  color: rgba(58, 42, 30, 0.6);
+}
+
+.panel--chogots .cta-note a {
+  color: rgb(180, 90, 60);
 }
 
 .panel--chogots .stat-value {

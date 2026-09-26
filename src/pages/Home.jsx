@@ -46,8 +46,27 @@ export default function Home() {
           </p>
 
           <div className="cta-row">
-            <div className="cta-pill">Coming Soon</div>
+            <a
+              className="cta-pill"
+              href="https://play.google.com/apps/testing/com.SqualrusGames.Chogots"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get the Test Build
+            </a>
+            <a
+              className="cta-pill cta-pill--ghost"
+              href="mailto:games@squalr.us?subject=Chogots%20tester%20request"
+            >
+              Request to Join
+            </a>
           </div>
+
+          <p className="cta-note">
+            Closed testing on Android. Not on the list yet? Email{' '}
+            <a href="mailto:games@squalr.us?subject=Chogots%20tester%20request">games@squalr.us</a>{' '}
+            and we'll add you.
+          </p>
 
           <div className="stats">
             <div className="stat">
