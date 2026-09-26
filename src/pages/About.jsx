@@ -66,16 +66,16 @@ function Headshot({ photo, role }) {
 export default function About() {
   useSeo({
     title: 'About — Squalrus Games',
-    description: 'Squalrus Games is an independent studio in Washington state making small games, trying strange ideas, and building software no one asked for.',
+    description: 'Squalrus Games is an independent studio in Seattle, Washington making small games, trying strange ideas, and building software no one asked for.',
     path: '/about',
   });
 
   return (
     <article className="doc">
       <h1>About</h1>
-      <p className="updated">SQUALRUS GAMES LLC · Washington State</p>
+      <p className="updated">SQUALRUS GAMES LLC · Seattle, Washington</p>
 
-      <p>Squalrus Games is an independent studio based in Washington state. We make small games, try out strange ideas, and build software that no one asked for — then finish it anyway, out of spite.</p>
+      <p>Squalrus Games is an independent studio based in Seattle, Washington. We make small games, try out strange ideas, and build software that no one asked for — then finish it anyway, out of spite.</p>
 
       <p>Our games are self-published and deliberately small. A creature that is probably fine. A space shooter that goes on forever. We aim for entertaining, occasionally sarcastic, and fun to play for more than one sitting. If that sounds like a low bar, that's intentional; we like to clear it.</p>
 
