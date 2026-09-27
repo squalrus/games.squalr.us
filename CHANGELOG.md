@@ -2,6 +2,23 @@
 
 User-visible changes, newest first. Follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) format and [semver](https://semver.org/) versioning.
 
+## [0.3.0] — 2026-09-27
+
+### Added
+
+- **Press kit.** New `/press` page, linked from the footer: a studio blurb and fact sheet, fact cards for Chogots and Infinity Space (copy from `docs/game-bio-*.md`), the logo in full-color, stacked, light-background and one-color versions with SVG downloads, logo usage rules, the 8 brand colors (click a swatch to copy its hex), the three brand fonts, and a short guide to writing the studio and game names. Screenshots and key art are noted as coming soon. (`src/pages/Press.jsx`, `public/press/`, `src/App.jsx`)
+- **Pixel squalrus logo and favicon.** The 16×16 pixel squalrus (walrus up front, squirrel out back) now appears in the header, hero, footer and press kit, and is the site favicon. The favicon switches to its light-background colors when the browser's tab bar is light. (`src/components/SqualrusMark.jsx`, `public/favicon.svg`, `index.html`)
+
+### Changed
+
+- **"Arcade after dark" redesign.** The whole site moves to the new brand: near-black teal background, one cyan and one hot-pink accent, Silkscreen / Pixelify Sans / Space Grotesk type, stepped pixel corners, bevelled pixel buttons, blinking cursors and scanlines. Blinking and fade-ins turn off when reduced motion is on. (`src/style.css`, `index.html`)
+- **Title-screen homepage hero.** The intro is now an arcade title screen: a score bar, the big logo and wordmark, the tagline, a "Select game" menu linking to each game, and a "Press start" link down to Chogots. (`src/pages/Home.jsx`)
+- **Game sections restyled.** Chogots and Infinity Space get "Game 01" / "Game 02" tags, pixel-font labels and pixel buttons. The animated backgrounds, the Chogots tester buttons and all copy are unchanged. (`src/pages/Home.jsx`, `src/style.css`)
+- **New header.** Pixel logo and wordmark, pixel-font nav with a blinking ▶ on the current page, and a squalr.us link. The nav now collapses into the menu below 960px instead of 640px, since the new type is wider. (`src/components/SiteHeader.jsx`)
+- **New footer.** Checkered strip, logo, legal line with Seattle, WA, Privacy / Support / Press Kit / email links, a "Continue?" back-to-top button, and 88×31 badges (No ads, No IAP, Made in SEA, 60 FPS OK). (`src/components/SiteFooter.jsx`, `src/components/Layout.jsx`)
+- **Shared subpage template.** About, Careers, Privacy and Support now share a dotted title band with a breadcrumb, a pixel-font title and a colored stripe, over a narrower reading column. (`src/components/DocPage.jsx`, `src/pages/About.jsx`, `src/pages/Careers.jsx`, `src/pages/Privacy.jsx`, `src/pages/Support.jsx`)
+- **Sitemap and README cover the press kit.** (`public/sitemap.xml`, `README.md`)
+
 ## [0.2.2] — 2026-09-26
 
 ### Added

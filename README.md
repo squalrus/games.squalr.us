@@ -11,6 +11,7 @@ The animated starfield background is generated entirely on `<canvas>` at load ti
 | `/` | Homepage — a Squalrus Games header, then one section per game |
 | `/about` | Studio about page, including the team roster (headshots in `public/team/`, set per role via `photo` in `About.jsx`) |
 | `/careers` | Careers page — no openings, open to collaboration via email |
+| `/press` | Press kit and brand guide — studio facts, game fact sheets, logo SVG downloads (`public/press/`), colors, type. Linked from the footer |
 | `/privacy` | Privacy policy, covering every Squalrus Games title — hosted here for store listing submission (Google Play, Microsoft Partner Center, Steamworks, Nintendo Developer Portal all require a public URL) |
 | `/support` | Support/contact page, covering every title — hosted here for the same store listing requirement |
 
@@ -44,15 +45,19 @@ Outputs static files to `dist/`, which is what the Azure Static Web Apps deploy 
 | `src/pages/Careers.jsx` | Careers route — collaboration contact |
 | `src/pages/Privacy.jsx` | Privacy policy route, covering all games |
 | `src/pages/Support.jsx` | Support/contact route, covering all games |
+| `src/pages/Press.jsx` | Press kit route — studio/game fact sheets, logo downloads, palette, type |
+| `src/components/SqualrusMark.jsx` | The 16×16 pixel squalrus mark (full color, light-ground, and mono variants) |
+| `src/components/DocPage.jsx` | Shared subpage template — dotted title band, breadcrumb, meta line |
+| `public/favicon.svg`, `public/press/*.svg` | Favicon (swaps to the light-ground palette in light browser chrome) and downloadable logo marks |
 | `src/components/StarfieldBackground.jsx` | Mounts the procedural starfield canvas behind the homepage |
 | `src/components/SiteHeader.jsx` | Fixed header — brand mark plus nav (homepage section deep links, About, Careers) |
-| `src/components/SiteFooter.jsx` | Shared publisher/legal footer (SQUALRUS GAMES LLC, `games@squalr.us`), used on every page |
+| `src/components/SiteFooter.jsx` | Shared arcade footer — lockup, legal line, Privacy/Support/Press Kit/email links, 88×31 badges |
 | `src/lib/starfield.js` | Procedural nebula/galaxy canvas generator + parallax drag/drift camera |
 | `src/lib/seo.js` | `useSeo()` hook — sets per-route title, meta description, OG/Twitter description, and canonical URL |
-| `src/style.css` | Layout, typography, animations |
+| `src/style.css` | Brand tokens (`:root`), layout, pixel primitives, typography, animations |
 | `staticwebapp.config.json` | Azure Static Web Apps SPA fallback so React Router routes survive a hard refresh |
 | `public/robots.txt` | Allows all crawlers, points to `sitemap.xml` |
-| `public/sitemap.xml` | Static sitemap listing `/`, `/about`, `/careers`, `/privacy`, `/support`. Update by hand if routes change — not generated at build time |
+| `public/sitemap.xml` | Static sitemap listing `/`, `/about`, `/careers`, `/press`, `/privacy`, `/support`. Update by hand if routes change — not generated at build time |
 
 ## SEO
 

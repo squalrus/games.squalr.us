@@ -5,6 +5,7 @@ import About from './pages/About.jsx';
 import Careers from './pages/Careers.jsx';
 import Privacy from './pages/Privacy.jsx';
 import Support from './pages/Support.jsx';
+import Press from './pages/Press.jsx';
 
 export default function App() {
   return (
@@ -13,8 +14,9 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/careers" element={<Careers />} />
-        <Route path="/privacy"element={<Privacy />} />
+        <Route path="/privacy" element={<Privacy />} />
         <Route path="/support" element={<Support />} />
+        <Route path="/press" element={<Press />} />
       </Route>
     </Routes>
   );

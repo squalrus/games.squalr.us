@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import DocPage from '../components/DocPage.jsx';
 import { useSeo } from '../lib/seo.js';
 
 export default function Support() {
@@ -9,9 +10,7 @@ export default function Support() {
   });
 
   return (
-    <article className="doc">
-      <h1>Support</h1>
-      <p className="updated">SQUALRUS GAMES LLC</p>
+    <DocPage crumb="Help" title="Support" meta="SQUALRUS GAMES LLC">
 
       <p>Need help with one of our games, found a bug, or have feedback? Email us at <a href="mailto:games@squalr.us">games@squalr.us</a> — let us know which game you're writing about — and we'll get back to you.</p>
 
@@ -27,6 +26,6 @@ export default function Support() {
 
       <h2>Privacy</h2>
       <p>See our <Link to="/privacy">Privacy Policy</Link> for details on what data our games collect (in short: none beyond what you send us directly).</p>
-    </article>
+    </DocPage>
   );
 }

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import DocPage from '../components/DocPage.jsx';
 import { useSeo } from '../lib/seo.js';
 
 // Headshots live in public/team/. Every role shares one photo for now; give a role its own by changing `photo`.
@@ -71,9 +72,7 @@ export default function About() {
   });
 
   return (
-    <article className="doc">
-      <h1>About</h1>
-      <p className="updated">SQUALRUS GAMES LLC · Seattle, Washington</p>
+    <DocPage crumb="Studio" title="About" meta="SQUALRUS GAMES LLC · Seattle, Washington">
 
       <p>Squalrus Games is an independent studio based in Seattle, Washington. We make small games, try out strange ideas, and build software that no one asked for — then finish it anyway, out of spite.</p>
 
@@ -96,6 +95,6 @@ export default function About() {
       </ul>
 
       <p className="fine-print">Any resemblance between team members is purely coincidental. Interested in making it less coincidental? See <Link to="/careers">Careers</Link>.</p>
-    </article>
+    </DocPage>
   );
 }
