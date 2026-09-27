@@ -1,3 +1,4 @@
+import DocPage from '../components/DocPage.jsx';
 import { useSeo } from '../lib/seo.js';
 
 export default function Privacy() {
@@ -8,9 +9,7 @@ export default function Privacy() {
   });
 
   return (
-    <article className="doc">
-      <h1>Privacy Policy</h1>
-      <p className="updated">Last updated: September 22, 2026</p>
+    <DocPage crumb="Legal" title="Privacy Policy" meta="Last updated: September 22, 2026">
 
       <p>SQUALRUS GAMES LLC ("we", "us") publishes games including Infinity Space and Chogots (each, a "Game"). This policy explains what data our Games collect and how it's used.</p>
 
@@ -33,6 +32,6 @@ export default function Privacy() {
 
       <h2>Contact</h2>
       <p>Questions about this policy can be sent to <a href="mailto:games@squalr.us">games@squalr.us</a>.</p>
-    </article>
+    </DocPage>
   );
 }

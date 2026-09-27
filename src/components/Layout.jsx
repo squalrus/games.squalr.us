@@ -19,17 +19,17 @@ function useScrollOnNavigate() {
   }, [pathname, hash, key]);
 }
 
-// Thin header + footer shared by every route, wrapping whichever page is active.
+// Fixed header + arcade footer shared by every route, wrapping whichever page is active.
 export default function Layout() {
   useScrollOnNavigate();
 
   return (
     <>
       <SiteHeader />
-      <Outlet />
-      <footer className="site-footer">
-        <SiteFooter />
-      </footer>
+      <main className="page">
+        <Outlet />
+      </main>
+      <SiteFooter />
     </>
   );
 }

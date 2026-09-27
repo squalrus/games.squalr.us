@@ -1,6 +1,13 @@
+import { Link } from 'react-router-dom';
 import StarfieldBackground from '../components/StarfieldBackground.jsx';
 import PixelBackground from '../components/PixelBackground.jsx';
+import SqualrusMark from '../components/SqualrusMark.jsx';
 import { useSeo } from '../lib/seo.js';
+
+const GAMES = [
+  { to: '/#chogots', name: 'Chogots', platforms: 'Android · Testing' },
+  { to: '/#infinity-space', name: 'Infinity Space', platforms: 'Android · Xbox · Steam' },
+];
 
 export default function Home() {
   useSeo({
@@ -10,28 +17,51 @@ export default function Home() {
   });
 
   return (
-    <main className="panels">
-      <section className="panel panel--brand">
+    <div className="panels">
+      <section className="panel panel--brand dots" aria-label="Intro">
+        <div className="glow" aria-hidden="true"></div>
+
+        <div className="hud" aria-hidden="true">
+          <span><b>1UP</b> 000000</span>
+          <span><b>Hi-score</b> 0133742</span>
+          <span className="hud-credit"><b>Credit</b> 02</span>
+        </div>
+
         <div className="panel-content">
-          <div className="kicker">Indie · Self-published</div>
+          <SqualrusMark size={176} className="hero-mark" />
 
-          <h1 className="headline">Squalrus Games</h1>
+          <h1 className="hero-title">Squalrus</h1>
+          <div className="hero-sub" aria-hidden="true">
+            <span className="rule"></span>
+            <span className="hero-games">Games</span>
+            <span className="rule"></span>
+          </div>
 
-          <p className="tagline">Small, focused games.</p>
+          <p className="hero-tagline">Small, focused games.</p>
+          <p className="subhead">We make small games and finish them. Pick one below to see what we're working on.</p>
 
-          <p className="subhead">
-            We make small games and finish them. Scroll down to see what we're working on.
-          </p>
-
-          <div className="hint scroll-hint">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-            <span>Scroll to explore</span>
+          <div className="select-frame px">
+            <nav className="select-menu px" aria-label="Games">
+              <div className="select-title">— Select game —</div>
+              {GAMES.map(({ to, name, platforms }) => (
+                <Link key={to} to={to} className="select-item">
+                  <span className="select-name">
+                    <span className="cursor blink" aria-hidden="true">▶</span>{name}
+                  </span>
+                  <span className="select-platforms">{platforms}</span>
+                </Link>
+              ))}
+            </nav>
           </div>
         </div>
+
+        <Link to="/#chogots" className="press-start blink">▼ Press start ▼</Link>
+        <div className="scan" aria-hidden="true"></div>
       </section>
 
       <section className="panel panel--chogots" id="chogots">
         <PixelBackground />
+        <div className="game-tag px">Game 01</div>
 
         <div className="panel-content">
           <div className="kicker">Pixel-art creature care · Android</div>
@@ -47,7 +77,7 @@ export default function Home() {
 
           <div className="cta-row">
             <a
-              className="cta-pill"
+              className="px-btn px"
               href="https://play.google.com/apps/testing/com.SqualrusGames.Chogots"
               target="_blank"
               rel="noopener noreferrer"
@@ -55,10 +85,10 @@ export default function Home() {
               Get the Test Build
             </a>
             <a
-              className="cta-pill cta-pill--ghost"
+              className="px-btn px-btn--outline px"
               href="mailto:games@squalr.us?subject=Chogots%20tester%20request"
             >
-              Request to Join
+              <span className="px">Request to Join</span>
             </a>
           </div>
 
@@ -86,8 +116,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section className="panel panel--infinity-space" id="infinity-space">
         <StarfieldBackground />
+        <div className="game-tag px">Game 02</div>
 
         <div className="panel-content">
           <div className="kicker">Procedurally generated · Top-down · Survival shooter</div>
@@ -103,7 +135,7 @@ export default function Home() {
           </p>
 
           <div className="cta-row">
-            <div className="cta-pill">Coming Soon</div>
+            <div className="px-btn px">Coming Soon</div>
           </div>
 
           <div className="stats">
@@ -125,11 +157,10 @@ export default function Home() {
         </div>
 
         <div className="hint drag-hint">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 9l-3 3 3 3M9 5l3-3 3 3M15 19l-3 3-3-3M19 9l3 3-3 3M2 12h20M12 2v20"/></svg>
+          <span aria-hidden="true">✥</span>
           <span>Drag to explore</span>
         </div>
       </section>
-
-    </main>
+    </div>
   );
 }

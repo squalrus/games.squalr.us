@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import DocPage from '../components/DocPage.jsx';
 import { useSeo } from '../lib/seo.js';
 
 export default function Careers() {
@@ -9,9 +10,7 @@ export default function Careers() {
   });
 
   return (
-    <article className="doc">
-      <h1>Careers</h1>
-      <p className="updated">SQUALRUS GAMES LLC</p>
+    <DocPage crumb="Studio" title="Careers" meta="SQUALRUS GAMES LLC">
 
       <h2>Open positions</h2>
       <p>None at the moment. Every role at Squalrus Games is currently filled, several of them by <Link to="/about">the same person</Link>.</p>
@@ -22,6 +21,6 @@ export default function Careers() {
       <p>Same goes if you don't make things but have strong opinions about what we're making. Those are welcome too.</p>
 
       <p>Email <a href="mailto:games@squalr.us?subject=Collaboration">games@squalr.us</a> with a bit about yourself, what you make, and a link to your work. Our Head of Player Support will read it, and pass it along to the rest of the team with remarkable speed.</p>
-    </article>
+    </DocPage>
   );
 }
