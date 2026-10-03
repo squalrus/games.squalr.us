@@ -5,7 +5,7 @@ import { useSeo } from '../lib/seo.js';
 export default function Support() {
   useSeo({
     title: 'Support — Squalrus Games',
-    description: 'Need help with an Infinity Space, Chogots, or another Squalrus Games title? Contact SQUALRUS GAMES support.',
+    description: "Need help with Chogots, Infinity Space, or another Squalrus Games title? Email games@squalr.us and we'll get back to you.",
     path: '/support',
   });
 
@@ -17,7 +17,7 @@ export default function Support() {
       <h2>When reporting a problem</h2>
       <p>Including the following helps us track down issues faster:</p>
       <ul>
-        <li>Which game you're playing (Infinity Space, Chogots, etc.)</li>
+        <li>Which game you're playing (Chogots, Infinity Space, etc.)</li>
         <li>Your device model and OS version</li>
         <li>The app version, if shown in the game's menus</li>
         <li>What you were doing when the problem happened</li>

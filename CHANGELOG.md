@@ -2,6 +2,13 @@
 
 User-visible changes, newest first. Follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) format and [semver](https://semver.org/) versioning.
 
+## [0.3.1] — 2026-10-03
+
+### Changed
+
+- **Copy pass for voice.** Site copy now follows the squalr.us writing style guide: contractions throughout, "folks" over "people" on Careers, and the Privacy Policy rewritten in active voice ("we'll update this policy first", "Send questions to…") with no change to what it promises. The Support page's search description no longer reads "an Infinity Space" or uses the all-caps legal name in running text. (`src/pages/About.jsx`, `src/pages/Press.jsx`, `src/pages/Careers.jsx`, `src/pages/Privacy.jsx`, `src/pages/Support.jsx`)
+- **Chogots listed first everywhere.** The page description, social share text and structured data, plus the Privacy, Support and README mentions, now list Chogots before Infinity Space to match the homepage order. The default page description now matches the homepage's. (`index.html`, `src/pages/Privacy.jsx`, `src/pages/Support.jsx`, `README.md`)
+
 ## [0.3.0] — 2026-09-27
 
 ### Added

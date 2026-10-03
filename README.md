@@ -1,6 +1,6 @@
 # Squalrus Games — Marketing Site
 
-The marketing site for Squalrus Games' titles, built as a small React + React Router single-page app (Vite). A single homepage with a section per game — currently Infinity Space and Chogots — plus shared Privacy/Support pages covering every title.
+The marketing site for Squalrus Games' titles, built as a small React + React Router single-page app (Vite). A single homepage with a section per game — currently Chogots and Infinity Space — plus shared Privacy/Support pages covering every title.
 
 The animated starfield background is generated entirely on `<canvas>` at load time (`src/lib/starfield.js`) — no image assets to ship. Drag to pan; it idles with a slow auto-drift otherwise. It only mounts on the landing page, which scrolls independently over the fixed background (`.home-page` in `src/style.css`) so more game sections can be added without needing their own routes.
 
