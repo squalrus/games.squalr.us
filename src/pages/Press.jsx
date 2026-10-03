@@ -121,7 +121,7 @@ export default function Press() {
         <div className="press-split">
           <div>
             <p>Squalrus Games is an independent studio based in Seattle, Washington. We make small games, try out strange ideas, and build software that no one asked for — then finish it anyway, out of spite.</p>
-            <p>Our games are self-published and deliberately small. A creature that is probably fine. A space shooter that goes on forever. None of them require an account, and none of them collect personal data.</p>
+            <p>Our games are self-published and deliberately small. A creature that's probably fine. A space shooter that goes on forever. None of them require an account, and none of them collect personal data.</p>
           </div>
           <dl className="fact-sheet">
             {FACTS.map(([label, value]) => (

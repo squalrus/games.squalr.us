@@ -5,7 +5,7 @@ import { useSeo } from '../lib/seo.js';
 export default function Careers() {
   useSeo({
     title: 'Careers — Squalrus Games',
-    description: 'Squalrus Games has no open positions right now, but we are always interested in collaborating. Email games@squalr.us.',
+    description: "Squalrus Games has no open positions right now, but we're always interested in collaborating. Email games@squalr.us.",
     path: '/careers',
   });
 
@@ -16,7 +16,7 @@ export default function Careers() {
       <p>None at the moment. Every role at Squalrus Games is currently filled, several of them by <Link to="/about">the same person</Link>.</p>
 
       <h2>Collaboration</h2>
-      <p>That said, we're always open to working with people on the right project. If you're an artist, musician, sound designer, writer, programmer, or anyone else who makes things and likes small, strange games, we'd love to hear from you.</p>
+      <p>That said, we're always open to working with folks on the right project. If you're an artist, musician, sound designer, writer, programmer, or anyone else who makes things and likes small, strange games, we'd love to hear from you.</p>
 
       <p>Same goes if you don't make things but have strong opinions about what we're making. Those are welcome too.</p>
 
