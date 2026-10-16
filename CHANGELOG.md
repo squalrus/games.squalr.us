@@ -2,7 +2,15 @@
 
 User-visible changes, newest first. Follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) format and [semver](https://semver.org/) versioning.
 
-## [0.3.1] — 2026-10-03
+## [0.3.2] — 2026-10-16
+
+### Added
+
+- **LinkedIn company page kit.** Setup notes for the Squalrus Games LinkedIn page: create-page form values, About copy, a tagline in two lengths, and three launch posts. Adds a 300×300 and 400×400 pixel logo drawn from the press-kit mark at whole-number scale, and a 2256×382 cover image. The logo is drawn by a small Pillow script, and the cover is an HTML source rendered in headless Chrome, so both can be regenerated. (`docs/linkedin.md`, `docs/linkedin/`)
+
+### Changed
+
+- **Docs index.** The release-plan index now links to the LinkedIn doc. (`docs/README.md`)
 
 ### Changed
 
