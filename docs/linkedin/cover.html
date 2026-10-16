@@ -1,0 +1,90 @@
+<!doctype html>
+<!-- LinkedIn cover source, 1128x191 CSS px (render at 2x for 2256x382). LinkedIn overlaps the page logo on the lower-left and
+     crops the sides on mobile, so everything that matters sits in the middle-right. Render: see docs/linkedin.md. -->
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;600&family=Silkscreen:wght@400;700&display=block" rel="stylesheet">
+<style>
+  :root {
+    --void: #050c11; --grid: #17323d; --static: #8fa8ad; --phosphor: #e8f1ef;
+    --cyan: #2de2e6; --pink: #ff4f9a; --tusk: #fff1d0;
+  }
+  html, body { margin: 0; }
+  body {
+    width: 1128px; height: 191px; overflow: hidden; position: relative;
+    background-color: var(--void);
+    background-image:
+      radial-gradient(ellipse 520px 160px at 62% 50%, rgba(45, 226, 230, 0.14), transparent 70%),
+      radial-gradient(#14303a 1px, transparent 1.6px);
+    background-size: auto, 24px 24px;
+    font-family: 'Silkscreen', monospace;
+  }
+  /* Scanlines, same feel as the homepage hero. */
+  body::after {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background: repeating-linear-gradient(to bottom, rgba(0,0,0,0.18) 0 1px, transparent 1px 3px);
+  }
+  .hud {
+    position: absolute; top: 14px; left: 300px; right: 40px;
+    display: flex; justify-content: space-between;
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--static);
+  }
+  .hud b { color: var(--pink); font-weight: 400; margin-right: 8px; }
+
+  .lockup { position: absolute; top: 56px; left: 300px; display: flex; align-items: center; gap: 20px; }
+  .lockup svg { width: 80px; height: 80px; display: block; }
+  .word {
+    font: 700 38px/0.9 'Silkscreen', monospace; text-transform: uppercase;
+    color: var(--phosphor); text-shadow: 4px 4px 0 var(--pink);
+  }
+  .games { display: flex; align-items: center; gap: 12px; margin-top: 12px;
+    font-size: 13px; letter-spacing: 0.5em; padding-left: 0.5em; text-transform: uppercase; color: var(--cyan); }
+  .rule { flex-grow: 1; height: 3px; background: var(--cyan); }
+
+  .pitch { position: absolute; top: 60px; right: 40px; text-align: right; padding-left: 28px; border-left: 3px solid var(--grid); }
+  .tagline { font: 600 24px/1.1 'Pixelify Sans', sans-serif; color: var(--tusk); }
+  .games-list { margin-top: 12px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--static); }
+  .games-list span { color: var(--cyan); }
+  .url { margin-top: 10px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--pink); }
+
+  .sprite { position: absolute; image-rendering: pixelated; opacity: 0.9; }
+</style>
+</head>
+<body>
+  <div class="hud" aria-hidden="true">
+    <span><b>1UP</b>000000</span>
+    <span><b>Hi-score</b>0133742</span>
+    <span><b>Credit</b>02</span>
+  </div>
+
+  <!-- Top-left stays visible above the page logo, so a few Chogots items drift there. -->
+  <img class="sprite" src="../../public/chogots/gem_berry.png" style="left:36px; top:22px; width:32px">
+  <img class="sprite" src="../../public/chogots/item_moon_jelly.png" style="left:108px; top:48px; width:32px; opacity:.6">
+  <img class="sprite" src="../../public/chogots/gem_leaf.png" style="left:176px; top:16px; width:32px; opacity:.75">
+  <img class="sprite" src="../../public/chogots/item_coffee.png" style="left:228px; top:66px; width:32px; opacity:.45">
+
+  <div class="lockup">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" shape-rendering="crispEdges">
+    <path fill="#2de2e6" d="M1 2h1v1h-1zM5 2h1v1h-1zM1 3h2v1h-2zM4 3h2v1h-2zM0 4h7v1h-7zM0 5h1v1h-1zM2 5h2v1h-2zM5 5h2v1h-2zM0 6h8v1h-8zM5 7h3v1h-3zM5 8h4v1h-4zM4 9h6v1h-6zM4 10h7v1h-7zM4 11h7v1h-7zM4 12h8v1h-8zM4 13h9v1h-9zM5 14h4v1h-4zM10 14h4v1h-4z"/>
+    <path fill="#9af3f3" d="M10 0h4v1h-4zM9 1h6v1h-6zM8 2h8v1h-8zM8 3h2v1h-2zM13 3h3v1h-3zM8 4h5v1h-5zM14 4h2v1h-2zM9 5h4v1h-4zM14 5h2v1h-2zM10 6h2v1h-2zM13 6h3v1h-3zM11 7h1v1h-1zM13 7h3v1h-3zM11 8h5v1h-5zM11 9h4v1h-4zM11 10h4v1h-4zM11 11h3v1h-3zM12 12h1v1h-1z"/>
+    <path fill="#1a8f9c" d="M1 8h1v1h-1zM3 8h1v1h-1zM0 14h5v1h-5zM9 14h1v1h-1zM10 3h3v1h-3zM13 4h1v1h-1zM13 5h1v1h-1zM12 6h1v1h-1zM12 7h1v1h-1z"/>
+    <path fill="#c8fbf5" d="M0 7h2v1h-2zM3 7h2v1h-2zM0 8h1v1h-1zM2 8h1v1h-1zM4 8h1v1h-1zM1 9h3v1h-3z"/>
+    <path fill="#06131a" d="M1 5h1v1h-1zM4 5h1v1h-1z"/>
+    <path fill="#ff4f9a" d="M2 7h1v1h-1z"/>
+    <path fill="#fff1d0" d="M1 10h1v1h-1zM3 10h1v1h-1zM1 11h1v1h-1zM3 11h1v1h-1zM1 12h1v1h-1zM3 12h1v1h-1zM1 13h1v1h-1zM3 13h1v1h-1z"/>
+    </svg>
+    <div>
+      <div class="word">Squalrus</div>
+      <div class="games"><span class="rule"></span>Games<span class="rule"></span></div>
+    </div>
+  </div>
+
+  <div class="pitch">
+    <div class="tagline">Small, focused games.</div>
+    <div class="games-list"><span>Chogots</span> · <span>Infinity Space</span></div>
+    <div class="url">games.squalr.us · Seattle</div>
+  </div>
+</body>
+</html>

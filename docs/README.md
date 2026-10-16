@@ -16,6 +16,7 @@ This plan is split across documents in this folder:
 - [Nintendo Switch](switch.md)
 - [Cross-Platform Achievements/Leaderboards](achievements.md) — decision summary across all four platforms
 - [Testing on Each Platform](testing.md)
+- [LinkedIn Company Page](linkedin.md) — create-page form values, logo, cover, About copy, first posts
 
 ---
 
