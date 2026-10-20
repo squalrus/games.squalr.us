@@ -84,7 +84,7 @@ export default function Home() {
 
           <p className="subhead">
             A pocket creature-care game with a deadpan sense of humor. Hatch an egg, find out which
-            of six species you got, then feed it, pet it, clean up after it and furnish its room.
+            species you got, then feed it, pet it, clean up after it and furnish its room.
             Gem Match pays for all of it. Check back later — it'll still be there, mostly fine.
           </p>
 

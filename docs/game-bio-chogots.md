@@ -32,17 +32,17 @@ Last synced with the game at **Chogots v0.51.0** (2026-10-14). To catch up after
 
 ### Short (1–2 sentences — store taglines, social bios; matches `Press.jsx`'s game card)
 
-> A pocket creature-care game with a deadpan sense of humor. Hatch an egg into one of six species, keep its five needs up, furnish its room, and play Gem Match to pay for it all. Check back later — it's probably fine.
+> A pocket creature-care game with a deadpan sense of humor. Hatch an egg and see which species comes out, keep its five needs up, furnish its room, and play Gem Match to pay for it all. Check back later — it's probably fine.
 
 ### Long (current canonical version, matches `Home.jsx`'s subhead)
 
-> A pocket creature-care game with a deadpan sense of humor. Hatch an egg, find out which of six species you got, then feed it, pet it, clean up after it and furnish its room. Gem Match pays for all of it. Check back later — it'll still be there, mostly fine.
+> A pocket creature-care game with a deadpan sense of humor. Hatch an egg, find out which species you got, then feed it, pet it, clean up after it and furnish its room. Gem Match pays for all of it. Check back later — it'll still be there, mostly fine.
 
 ### Long, expanded (for storefronts with more room)
 
 > Chogots is a pixel-art creature-care game, Tamagotchi-adjacent but dry about it — the creature's status lines and flavor text read flat and mildly funny rather than cute or urgent ("Pomu is fine. Pomu has been fine all week.").
 >
-> Tap the egg until it hatches, and find out what's inside: every chogot is one of six species — Sprig, Hopli, Floof, Dotti, Flit or Tabbo — picked at random the moment it hatches. Name it, then keep its food, joy, rest, hygiene and love up. Feed it from 21 foods (it has favorites, and things it won't touch), toss it one of 11 toys, pet it, bathe it, clean up its messes before the flies move in, and give it medicine when it's sick.
+> Tap the egg until it hatches, and find out what's inside: every new chogot is one of six species — Sprig, Hopli, Floof, Dotti, Flit or Tabbo — picked at random the moment it hatches. The original pink Mochi lives on in saves from before species existed. Name it, then keep its food, joy, rest, hygiene and love up. Feed it from 21 foods (it has favorites, and things it won't touch), toss it one of 11 toys, pet it, bathe it, clean up its messes before the flies move in, and give it medicine when it's sick.
 >
 > Every level-up drops a few random items and a blue coin, the currency for furniture. There are 15 pieces to put in its room — a bed, a bathtub, a fish tank to feed, a plant to water, a window that opens onto the real day or night sky — plus wall and floor patterns. Your chogot sits on the seats to rest.
 >
@@ -54,7 +54,7 @@ Last synced with the game at **Chogots v0.51.0** (2026-10-14). To catch up after
 
 Counts are from the game's `ActionCatalog.cs` and `docs/systems/SPECIES_SYSTEM.md` as of v0.51.0 — recheck them when syncing.
 
-- **Six species**, rolled at random on hatch: Sprig (leaf sprout), Hopli (long ears), Floof (fur tuft), Dotti (antenna and spots), Flit (wings), Tabbo (cat ears and stripes). Cosmetic only; every egg looks the same, so it's a surprise.
+- **Seven species.** Mochi, the original pink chogot, is kept for saves from before species existed and never hatches from a new egg. The other six are rolled at random on hatch: Sprig (leaf sprout), Hopli (long ears), Floof (fur tuft), Dotti (antenna and spots), Flit (wings), Tabbo (cat ears and stripes). Cosmetic only; every egg looks the same, so it's a surprise.
 - **Five needs:** food, joy, rest, hygiene, love. Plus sickness and medicine.
 - **21 foods, 11 toys, 5 tools** (trash bags, soap, shampoo, medicine), bought with coins in the Shop. Each chogot has its own likes and dislikes.
 - **15 furnishings**, bought with blue coins: seats your chogot rests on, interactive pieces (fridge, toy chest, fish tank, potted plant, window, floor lamp), and wall pieces (framed art, a wall clock showing the real time). Lights and the window change the room's lighting.

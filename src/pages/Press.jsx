@@ -20,10 +20,10 @@ const GAMES = [
     name: 'Chogots',
     tone: 'chogots',
     tagline: "It's probably fine.",
-    description: "A pocket creature-care game with a deadpan sense of humor. Hatch an egg into one of six species, keep its five needs up, furnish its room, and play Gem Match to pay for it all. Check back later — it's probably fine.",
+    description: "A pocket creature-care game with a deadpan sense of humor. Hatch an egg and see which species comes out, keep its five needs up, furnish its room, and play Gem Match to pay for it all. Check back later — it's probably fine.",
     rows: [
       ['Genre', 'Simulation, casual — pixel-art creature care'],
-      ['Features', 'Six species · five needs · 21 foods, 11 toys, 15 furnishings · Gem Match in Easy, Hard and Endless'],
+      ['Features', 'Seven species · five needs · 21 foods, 11 toys, 15 furnishings · Gem Match in Easy, Hard and Endless'],
       ['Platforms', 'Android'],
       ['Status', 'Closed testing on Google Play'],
     ],

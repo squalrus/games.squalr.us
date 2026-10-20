@@ -12,7 +12,7 @@ User-visible changes, newest first. Follows [Keep a Changelog](https://keepachan
 
 ### Changed
 
-- **Chogots copy brought up to the current game.** The homepage description, the stats row (7 chogot species, 3 Gem Match modes, closed testing) and the Press card (features, counts) now match Chogots v0.51.0. (`src/pages/Home.jsx`, `src/pages/Press.jsx`, `docs/game-bio-chogots.md`)
+- **Chogots copy brought up to the current game.** The homepage description, the stats row (7 chogot species, 3 Gem Match modes, closed testing) and the Press card (features, counts, seven species) now match Chogots v0.51.0. (`src/pages/Home.jsx`, `src/pages/Press.jsx`, `docs/game-bio-chogots.md`)
 - **Chogots sections use the game's fonts.** The title and stat numbers are in Silkscreen, and taglines and descriptions are in Chivo, matching the game. (`index.html`, `src/style.css`)
 
 ## [0.3.2] — 2026-10-16
