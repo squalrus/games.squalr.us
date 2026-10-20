@@ -22,6 +22,8 @@
   --f-pixel: 'Silkscreen', ui-monospace, monospace;
   --f-display: 'Pixelify Sans', 'Space Grotesk', sans-serif;
   --f-body: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  /* Chogots' in-game body face; its display face is Silkscreen, same as --f-pixel. */
+  --f-chogots: 'Chivo', ui-sans-serif, system-ui, sans-serif;
 
   --gutter: max(16px, env(safe-area-inset-left, 0px));
   --gutter-r: max(16px, env(safe-area-inset-right, 0px));
@@ -702,17 +704,23 @@ a.px-btn:active {
   color: var(--rust);
 }
 
+/* Chogots sections use the game's own type: Silkscreen for titles and numbers, Chivo for copy. */
 .panel--chogots .headline {
+  font: 700 clamp(40px, 7vw, 88px)/1 var(--f-pixel);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
   color: var(--bark);
   text-shadow: none;
 }
 
 .panel--chogots .tagline {
+  font-family: var(--f-chogots);
   color: var(--bark);
 }
 
 .panel--chogots .subhead,
 .panel--chogots .cta-note {
+  font-family: var(--f-chogots);
   color: var(--bark-soft);
 }
 
@@ -746,6 +754,7 @@ a.px-btn:active {
 }
 
 .panel--chogots .stat-value {
+  font: 700 22px/1 var(--f-pixel);
   color: var(--bark);
 }
 
@@ -755,6 +764,61 @@ a.px-btn:active {
 
 .panel--chogots .stat-divider {
   background: #d9c7b0;
+}
+
+/* Species row: frame 0/1 of each grown-up sheet (16px cells, 8 across), drawn at 4x. */
+.species {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px clamp(10px, 2.4vw, 22px);
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+  animation: fadein 0.8s ease 0.24s both;
+}
+
+.species-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.species-sprite {
+  --cell: 64px;
+  width: var(--cell);
+  height: var(--cell);
+  background-repeat: no-repeat;
+  background-size: calc(var(--cell) * 8) calc(var(--cell) * 2);
+  image-rendering: pixelated;
+  animation: species-idle 2.5s steps(1) infinite;
+}
+
+.species-name {
+  font: 400 10px/1.4 var(--f-pixel);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bark-soft);
+}
+
+/* The game's idle clip: two bob frames, then a blink. */
+@keyframes species-idle {
+  0%, 50% { background-position: 0 0; }
+  25%, 75% { background-position: calc(var(--cell) * -1) 0; }
+  90% { background-position: calc(var(--cell) * -2) 0; }
+}
+
+@media (max-width: 480px) {
+  .species-sprite {
+    --cell: 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .species, .species-sprite {
+    animation: none;
+  }
 }
 
 /* ── Hints ── */
@@ -1349,6 +1413,17 @@ a.px-btn:active {
   color: var(--bark);
 }
 
+.game-card--chogots h3 {
+  font: 700 36px/1 var(--f-pixel);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.doc .game-card--chogots p,
+.game-card--chogots dd {
+  font-family: var(--f-chogots);
+}
+
 .doc .game-card--chogots p {
   color: var(--bark-soft);
 }
@@ -1545,6 +1620,78 @@ a.px-btn:active {
   font-size: 14px;
   line-height: 1.4;
   color: var(--body);
+}
+
+/* ── Press: Chogots art ── */
+
+.doc .press-subhead {
+  margin: 48px 0 0;
+  font: 400 13px/1.3 var(--f-pixel);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+
+.art-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.art-tile {
+  position: relative;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.art-tile img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  image-rendering: pixelated;
+}
+
+.art-tile--wide {
+  aspect-ratio: auto;
+}
+
+.art-tile--logo {
+  padding: 16px;
+  background: var(--deep);
+}
+
+.art-tile figcaption {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  font: 400 11px/1 var(--f-pixel);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--phosphor);
+  background: rgba(5, 12, 17, 0.7);
+  padding: 4px 6px 3px;
+}
+
+/* Doubled class so the shared .downloads breakpoints further down don't override it. */
+.downloads.downloads--art {
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+@media (max-width: 640px) {
+  .art-grid,
+  .downloads.downloads--art {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .art-tile--wide,
+  .downloads.downloads--art li:first-child {
+    grid-column: span 2;
+  }
 }
 
 .rules {
