@@ -6,7 +6,7 @@ User-visible changes, newest first. Follows [Keep a Changelog](https://keepachan
 
 ### Added
 
-- **Chogots species on the homepage.** A new row shows the six species a chogot can hatch as (Sprig, Hopli, Floof, Dotti, Flit, Tabbo), each animated with its in-game idle. (`src/pages/Home.jsx`, `src/style.css`, `public/chogots/`)
+- **Chogots species on the homepage.** A new row shows the original pink Mochi and the six species a chogot can hatch as (Sprig, Hopli, Floof, Dotti, Flit, Tabbo), each animated with its in-game idle. (`src/pages/Home.jsx`, `src/style.css`, `public/chogots/`)
 - **Chogots art in the press kit.** Key art, the app icon and the logo, each with a PNG download, on the Press page. (`src/pages/Press.jsx`, `src/style.css`, `public/press/`)
 - **More Chogots art in the homepage background.** Species, foods, toys, furniture and the blue coin now float through the Chogots panel. (`src/lib/pixelfield.js`, `public/chogots/`)
 

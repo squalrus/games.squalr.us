@@ -9,8 +9,10 @@ const GAMES = [
   { to: '/#infinity-space', name: 'Infinity Space', platforms: 'Android · Xbox · Steam' },
 ];
 
-// Every egg hatches as one of these, at random (chogots/docs/systems/SPECIES_SYSTEM.md).
+// Mochi is the original pink chogot; every egg now hatches as one of the other six, at random
+// (chogots/docs/systems/SPECIES_SYSTEM.md). Mochi's sheet predates the species naming.
 const SPECIES = [
+  { id: 'mochi', sheet: 'creature_sprout_stage2', name: 'Mochi', trait: 'the original' },
   { id: 'sprig', name: 'Sprig', trait: 'leaf sprout' },
   { id: 'hopli', name: 'Hopli', trait: 'long ears' },
   { id: 'floof', name: 'Floof', trait: 'fur tuft' },
@@ -86,12 +88,12 @@ export default function Home() {
             Gem Match pays for all of it. Check back later — it'll still be there, mostly fine.
           </p>
 
-          <ul className="species" aria-label="The six chogot species">
-            {SPECIES.map(({ id, name, trait }, i) => (
+          <ul className="species" aria-label="The chogot species">
+            {SPECIES.map(({ id, sheet, name, trait }, i) => (
               <li key={id} className="species-item">
                 <span
                   className="species-sprite"
-                  style={{ backgroundImage: `url(/chogots/creature_${id}_stage2.png)`, animationDelay: `${i * -0.37}s` }}
+                  style={{ backgroundImage: `url(/chogots/${sheet || `creature_${id}_stage2`}.png)`, animationDelay: `${i * -0.37}s` }}
                   role="img"
                   aria-label={`${name}, ${trait}`}
                 ></span>

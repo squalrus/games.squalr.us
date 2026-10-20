@@ -810,8 +810,16 @@ a.px-btn:active {
 }
 
 @media (max-width: 480px) {
+  .species {
+    gap: 8px 6px;
+  }
+
   .species-sprite {
-    --cell: 48px;
+    --cell: 40px;
+  }
+
+  .species-name {
+    font-size: 9px;
   }
 }
 
