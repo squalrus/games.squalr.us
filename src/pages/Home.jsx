@@ -127,8 +127,8 @@ export default function Home() {
 
           <div className="stats">
             <div className="stat">
-              <div className="stat-value">6</div>
-              <div className="stat-label">Species to hatch</div>
+              <div className="stat-value">7</div>
+              <div className="stat-label">Chogot species</div>
             </div>
             <div className="stat-divider"></div>
             <div className="stat">
