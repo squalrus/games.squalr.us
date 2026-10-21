@@ -18,12 +18,48 @@ var CREATURE_ANIMS = [
   [[7, 0], [0, 1]],                         // happy grin + hop
   [[4, 1], [5, 1]],                         // sleep
 ];
+// Every egg hatches as one of six species (chogots/docs/systems/SPECIES_SYSTEM.md).
+// Their sheets share the original pink chogot's frame layout.
+var SPECIES = ['sprig', 'hopli', 'floof', 'dotti', 'flit', 'tabbo'];
+// Toys are a resting frame plus a three-frame reaction.
+var TOY_ANIM = [[[0, 0], [1, 0], [2, 0], [3, 0]]];
+
 var SPRITES = [
-  { name: 'creature_hatchling_stage1', frame: 12, anims: CREATURE_ANIMS, scales: [4, 5], weight: 3 },
-  { name: 'creature_sprout_stage2', frame: 16, anims: CREATURE_ANIMS, scales: [3, 4], weight: 3 },
-  { name: 'creature_hatchling', scales: [3, 4], weight: 2 },
-  { name: 'creature_sprout', scales: [3, 4], weight: 2 },
+  { name: 'creature_hatchling_stage1', frame: 12, anims: CREATURE_ANIMS, scales: [4, 5], weight: 2 },
+  { name: 'creature_sprout_stage2', frame: 16, anims: CREATURE_ANIMS, scales: [3, 4], weight: 2 },
+  { name: 'creature_hatchling', scales: [3, 4], weight: 1 },
+  { name: 'creature_sprout', scales: [3, 4], weight: 1 },
   { name: 'creature_egg', scales: [3], weight: 1 },
+  { name: 'item_gem', scales: [3, 4], weight: 1 },
+  { name: 'item_apple', scales: [2, 3], weight: 1 },
+  { name: 'item_banana', scales: [2, 3], weight: 1 },
+  { name: 'item_cupcake', scales: [2, 3], weight: 1 },
+  { name: 'item_cookie', scales: [2, 3], weight: 1 },
+  { name: 'item_soda', scales: [2, 3], weight: 1 },
+  { name: 'item_stromboli', scales: [2, 3], weight: 1 },
+  { name: 'item_medicine', scales: [2, 3], weight: 1 },
+  { name: 'item_shampoo', scales: [2, 3], weight: 1 },
+  { name: 'item_soap_bar', scales: [2, 3], weight: 1 },
+  { name: 'item_blueberry', scales: [2, 3], weight: 1 },
+  { name: 'item_candy', scales: [2, 3], weight: 1 },
+  { name: 'item_carrot', scales: [2, 3], weight: 1 },
+  { name: 'item_cheese', scales: [2, 3], weight: 1 },
+  { name: 'item_cracker', scales: [2, 3], weight: 1 },
+  { name: 'item_tofu', scales: [2, 3], weight: 1 },
+  { name: 'toy_board_game', frame: 16, anims: TOY_ANIM, scales: [2, 3], weight: 1 },
+  { name: 'toy_crayon', frame: 16, anims: TOY_ANIM, scales: [2, 3], weight: 1 },
+  { name: 'toy_lego_box', frame: 16, anims: TOY_ANIM, scales: [2, 3], weight: 1 },
+  { name: 'toy_phone', frame: 16, anims: TOY_ANIM, scales: [2, 3], weight: 1 },
+  { name: 'furnishing_pillow', scales: [2], weight: 1 },
+  { name: 'furnishing_small_bed', scales: [2], weight: 1 },
+  { name: 'toy_basketball', frame: 16, anims: TOY_ANIM, scales: [2, 3], weight: 1 },
+  { name: 'toy_pom_pom', frame: 16, anims: TOY_ANIM, scales: [2, 3], weight: 1 },
+  { name: 'toy_radio', frame: 16, anims: TOY_ANIM, scales: [2, 3], weight: 1 },
+  { name: 'toy_stuffed_animal', frame: 16, anims: TOY_ANIM, scales: [2, 3], weight: 1 },
+  { name: 'furnishing_beanbag', scales: [2], weight: 1 },
+  { name: 'furnishing_tv', scales: [2], weight: 1 },
+  { name: 'furnishing_game_console', scales: [2], weight: 1 },
+  { name: 'furnishing_framed_art', scales: [2], weight: 1 },
   { name: 'gem_berry', scales: [1, 2], weight: 1 },
   { name: 'gem_drop', scales: [1, 2], weight: 1 },
   { name: 'gem_honey', scales: [1, 2], weight: 1 },
@@ -44,6 +80,10 @@ var SPRITES = [
   { name: 'toy_cat_wand', frame: 16, anims: [[[0, 0], [1, 0], [2, 0], [3, 0]]], scales: [2, 3], weight: 1 },
   { name: 'toy_tennis_ball', frame: 16, anims: [[[0, 0], [1, 0], [2, 0], [1, 0]]], scales: [2, 3], weight: 1 },
 ];
+SPECIES.forEach(function (s) {
+  SPRITES.push({ name: 'creature_' + s + '_stage1', frame: 12, anims: CREATURE_ANIMS, scales: [4, 5], weight: 1 });
+  SPRITES.push({ name: 'creature_' + s + '_stage2', frame: 16, anims: CREATURE_ANIMS, scales: [3, 4], weight: 1 });
+});
 var SPRITE_FPS = 4;
 
 function rnd(a, b) { return a + Math.random() * (b - a); }

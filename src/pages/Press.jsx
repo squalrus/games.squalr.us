@@ -20,9 +20,10 @@ const GAMES = [
     name: 'Chogots',
     tone: 'chogots',
     tagline: "It's probably fine.",
-    description: "A pocket creature-care game with a deadpan sense of humor. Feed it, play Gem Match to keep it happy, and check back later — it's probably fine.",
+    description: "A pocket creature-care game with a deadpan sense of humor. Hatch an egg and see which species comes out, keep its five needs up, furnish its room, and play Gem Match to pay for it all. Check back later — it's probably fine.",
     rows: [
       ['Genre', 'Simulation, casual — pixel-art creature care'],
+      ['Features', 'Seven species · five needs · 21 foods, 11 toys, 15 furnishings · Gem Match in Easy, Hard and Endless'],
       ['Platforms', 'Android'],
       ['Status', 'Closed testing on Google Play'],
     ],
@@ -41,6 +42,13 @@ const GAMES = [
     ],
     anchor: '/#infinity-space',
   },
+];
+
+// Copied from the chogots repo: store-listing/feature_graphic_1024x500.png and Assets/Art/Chogots/{app_icon,splash_logo}.png.
+const CHOGOTS_ART = [
+  { file: 'chogots-feature-graphic.png', label: 'Key art', note: '1024 × 500', tone: 'wide', alt: 'Chogots key art: the CHOGOTS wordmark and "Hatch it. Feed it. Love it." beside a pink chogot with coins, a tennis ball and pizza' },
+  { file: 'chogots-app-icon.png', label: 'App icon', note: '512 × 512', tone: 'icon', alt: 'Chogots app icon: a pink pixel chogot on blue sky and green grass' },
+  { file: 'chogots-logo.png', label: 'Logo', note: '640 × 400, transparent. For dark backgrounds', tone: 'logo', alt: 'Chogots logo: a pink chogot over the CHOGOTS wordmark' },
 ];
 
 const COLORS = [
@@ -108,12 +116,12 @@ function Swatch({ name, hex, use }) {
 export default function Press() {
   useSeo({
     title: 'Press Kit — Squalrus Games',
-    description: 'Press kit and brand guide for Squalrus Games: studio facts, game fact sheets for Chogots and Infinity Space, logo downloads, colors, and type.',
+    description: 'Press kit and brand guide for Squalrus Games: studio facts, game fact sheets for Chogots and Infinity Space, Chogots key art, logo downloads, colors, and type.',
     path: '/press',
   });
 
   return (
-    <DocPage crumb="Press" title="Press Kit" meta="Brand & press resources · Updated September 26, 2026" wide>
+    <DocPage crumb="Press" title="Press Kit" meta="Brand & press resources · Updated October 16, 2026" wide>
       <p className="lede">Everything you need to write about Squalrus Games: who we are, what we're making, and how to use the squalrus. For anything that isn't here, email <a href="mailto:games@squalr.us?subject=Press">games@squalr.us</a>.</p>
 
       <section className="press-section" aria-labelledby="press-studio">
@@ -155,7 +163,27 @@ export default function Press() {
             </div>
           ))}
         </div>
-        <p className="fine-print">Screenshots and key art are on the way. Need something sooner? Email us and we'll send what we have.</p>
+
+        <h3 className="press-subhead">Chogots art</h3>
+        <div className="art-grid">
+          {CHOGOTS_ART.map(({ file, label, alt, tone }) => (
+            <figure key={file} className={`art-tile art-tile--${tone}`}>
+              <img src={`/press/${file}`} alt={alt} />
+              <figcaption>{label}</figcaption>
+            </figure>
+          ))}
+        </div>
+        <ul className="downloads downloads--art">
+          {CHOGOTS_ART.map(({ file, label, note }) => (
+            <li key={file}>
+              <a className="download px" href={`/press/${file}`} download>
+                <span className="download-label">{label}</span>
+                <span className="download-note">{note} · PNG</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+        <p className="fine-print">Chogots art is pixel art: scale it in whole multiples with nearest-neighbor, never smoothed. Screenshots of the current build are on the way. Need them sooner? Email us and we'll send what we have.</p>
       </section>
 
       <section className="press-section" aria-labelledby="press-logo">

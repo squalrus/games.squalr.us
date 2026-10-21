@@ -2,6 +2,19 @@
 
 User-visible changes, newest first. Follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) format and [semver](https://semver.org/) versioning.
 
+## [0.3.3] — 2026-10-16
+
+### Added
+
+- **Chogots species on the homepage.** A new row shows the original pink Mochi and the six species a chogot can hatch as (Sprig, Hopli, Floof, Dotti, Flit, Tabbo), each animated with its in-game idle. (`src/pages/Home.jsx`, `src/style.css`, `public/chogots/`)
+- **Chogots art in the press kit.** Key art, the app icon and the logo, each with a PNG download, on the Press page. (`src/pages/Press.jsx`, `src/style.css`, `public/press/`)
+- **More Chogots art in the homepage background.** Species, foods, toys, furniture and the blue coin now float through the Chogots panel. (`src/lib/pixelfield.js`, `public/chogots/`)
+
+### Changed
+
+- **Chogots copy brought up to the current game.** The homepage description, the stats row (7 chogot species, 3 Gem Match modes, closed testing) and the Press card (features, counts, seven species) now match Chogots v0.51.0. (`src/pages/Home.jsx`, `src/pages/Press.jsx`, `docs/game-bio-chogots.md`)
+- **Chogots sections use the game's fonts.** The title and stat numbers are in Silkscreen, and taglines and descriptions are in Chivo, matching the game. (`index.html`, `src/style.css`)
+
 ## [0.3.2] — 2026-10-16
 
 ### Added

@@ -9,6 +9,18 @@ const GAMES = [
   { to: '/#infinity-space', name: 'Infinity Space', platforms: 'Android · Xbox · Steam' },
 ];
 
+// Mochi is the original pink chogot; every egg now hatches as one of the other six, at random
+// (chogots/docs/systems/SPECIES_SYSTEM.md). Mochi's sheet predates the species naming.
+const SPECIES = [
+  { id: 'mochi', sheet: 'creature_sprout_stage2', name: 'Mochi', trait: 'the original' },
+  { id: 'sprig', name: 'Sprig', trait: 'leaf sprout' },
+  { id: 'hopli', name: 'Hopli', trait: 'long ears' },
+  { id: 'floof', name: 'Floof', trait: 'fur tuft' },
+  { id: 'dotti', name: 'Dotti', trait: 'antenna and spots' },
+  { id: 'flit', name: 'Flit', trait: 'wings' },
+  { id: 'tabbo', name: 'Tabbo', trait: 'cat ears and stripes' },
+];
+
 export default function Home() {
   useSeo({
     title: 'Squalrus Games',
@@ -71,9 +83,24 @@ export default function Home() {
           <p className="tagline">It's probably fine.</p>
 
           <p className="subhead">
-            A pocket creature-care game with a deadpan sense of humor. Feed it, play Gem Match to
-            keep it happy, and check back later — it'll still be there, mostly fine.
+            A pocket creature-care game with a deadpan sense of humor. Hatch an egg, find out which
+            species you got, then feed it, pet it, clean up after it and furnish its room.
+            Gem Match pays for all of it. Check back later — it'll still be there, mostly fine.
           </p>
+
+          <ul className="species" aria-label="The chogot species">
+            {SPECIES.map(({ id, sheet, name, trait }, i) => (
+              <li key={id} className="species-item">
+                <span
+                  className="species-sprite"
+                  style={{ backgroundImage: `url(/chogots/${sheet || `creature_${id}_stage2`}.png)`, animationDelay: `${i * -0.37}s` }}
+                  role="img"
+                  aria-label={`${name}, ${trait}`}
+                ></span>
+                <span className="species-name">{name}</span>
+              </li>
+            ))}
+          </ul>
 
           <div className="cta-row">
             <a
@@ -100,18 +127,18 @@ export default function Home() {
 
           <div className="stats">
             <div className="stat">
-              <div className="stat-value">2D</div>
-              <div className="stat-label">Pixel-art creature care</div>
+              <div className="stat-value">7</div>
+              <div className="stat-label">Chogot species</div>
             </div>
             <div className="stat-divider"></div>
             <div className="stat">
-              <div className="stat-value">Match-3</div>
-              <div className="stat-label">Gem Match minigame</div>
+              <div className="stat-value">3</div>
+              <div className="stat-label">Gem Match modes</div>
             </div>
             <div className="stat-divider"></div>
             <div className="stat">
-              <div className="stat-value">TBD</div>
-              <div className="stat-label">Android</div>
+              <div className="stat-value">Android</div>
+              <div className="stat-label">Closed testing</div>
             </div>
           </div>
         </div>
