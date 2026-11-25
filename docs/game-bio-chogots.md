@@ -107,4 +107,4 @@ Binaries on the site are copies; the chogots repo holds the sources. Re-copy the
 
 ## Platform Availability (keep in sync with `Home.jsx`'s Chogots section stat row)
 
-Stated as **Android — closed testing** on the live marketing site, with a link to the Google Play test build. This is the only platform in scope today; no Xbox, Steam, GOG, Switch, or iOS plans exist in [chogots/BACKLOG.md](https://github.com/squalrus/chogots/blob/main/BACKLOG.md) or elsewhere in the project. If that changes, mirror the multi-platform structure used in [Infinity Space's release plan](README.md) rather than inventing a new one.
+Stated as **Android — open testing** on the live marketing site. The join link is device-aware: Android visitors get the Google Play store listing, everyone else gets the web opt-in page. This is the only platform in scope today; no Xbox, Steam, GOG, Switch, or iOS plans exist in [chogots/BACKLOG.md](https://github.com/squalrus/chogots/blob/main/BACKLOG.md) or elsewhere in the project. If that changes, mirror the multi-platform structure used in [Infinity Space's release plan](README.md) rather than inventing a new one.

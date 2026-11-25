@@ -2,6 +2,13 @@
 
 User-visible changes, newest first. Follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) format and [semver](https://semver.org/) versioning.
 
+## [0.3.4] — 2026-11-25
+
+### Changed
+
+- **Chogots is in open testing, with device-aware join links.** Android visitors get the Google Play listing and can install it directly. Everyone else gets the web opt-in page to join with their Google account. Anyone can join now, so the "Request to Join" email button is gone. (`src/pages/Home.jsx`)
+- **"Closed testing" is now "Open testing"** in the Chogots stats row, the Press page status, the game bio, and the LinkedIn kit's posts. (`src/pages/Home.jsx`, `src/pages/Press.jsx`, `docs/game-bio-chogots.md`, `docs/linkedin.md`)
+
 ## [0.3.3] — 2026-10-16
 
 ### Added
