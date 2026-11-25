@@ -25,7 +25,7 @@ const GAMES = [
       ['Genre', 'Simulation, casual — pixel-art creature care'],
       ['Features', 'Seven species · five needs · 21 foods, 11 toys, 15 furnishings · Gem Match in Easy, Hard and Endless'],
       ['Platforms', 'Android'],
-      ['Status', 'Closed testing on Google Play'],
+      ['Status', 'Open testing on Google Play'],
     ],
     anchor: '/#chogots',
   },

@@ -21,6 +21,13 @@ const SPECIES = [
   { id: 'tabbo', name: 'Tabbo', trait: 'cat ears and stripes' },
 ];
 
+// Open testing on Google Play. On Android the store listing opens the Play app and offers the
+// test build directly; elsewhere the web opt-in page lets people join with their Google account.
+const CHOGOTS_PLAY_URL = 'https://play.google.com/store/apps/details?id=com.SqualrusGames.Chogots';
+const CHOGOTS_TESTING_URL = 'https://play.google.com/apps/testing/com.SqualrusGames.Chogots';
+
+const isAndroid = typeof navigator !== 'undefined' && /android/i.test(navigator.userAgent);
+
 export default function Home() {
   useSeo({
     title: 'Squalrus Games',
@@ -105,24 +112,26 @@ export default function Home() {
           <div className="cta-row">
             <a
               className="px-btn px"
-              href="https://play.google.com/apps/testing/com.SqualrusGames.Chogots"
+              href={isAndroid ? CHOGOTS_PLAY_URL : CHOGOTS_TESTING_URL}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Get the Test Build
+              {isAndroid ? 'Get it on Google Play' : 'Join the Test'}
             </a>
             <a
               className="px-btn px-btn--outline px"
-              href="mailto:games@squalr.us?subject=Chogots%20tester%20request"
+              href={isAndroid ? CHOGOTS_TESTING_URL : CHOGOTS_PLAY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <span className="px">Request to Join</span>
+              <span className="px">{isAndroid ? 'Join on the Web' : 'View on Google Play'}</span>
             </a>
           </div>
 
           <p className="cta-note">
-            Closed testing on Android. Not on the list yet? Email{' '}
-            <a href="mailto:games@squalr.us?subject=Chogots%20tester%20request">games@squalr.us</a>{' '}
-            and we'll add you.
+            {isAndroid
+              ? 'Open testing on Android. Install it from Google Play — anyone can join.'
+              : 'Open testing on Android. Join with your Google account, then install it on your phone.'}
           </p>
 
           <div className="stats">
@@ -138,7 +147,7 @@ export default function Home() {
             <div className="stat-divider"></div>
             <div className="stat">
               <div className="stat-value">Android</div>
-              <div className="stat-label">Closed testing</div>
+              <div className="stat-label">Open testing</div>
             </div>
           </div>
         </div>

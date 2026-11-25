@@ -42,7 +42,7 @@ Our games are self-published and deliberately small. None of them require an acc
 
 What we're making:
 
-▸ Chogots — A pocket creature-care game with a deadpan sense of humor. Feed it, play Gem Match to keep it happy, and check back later. It's probably fine. Pixel art, Android, in closed testing on Google Play now.
+▸ Chogots — A pocket creature-care game with a deadpan sense of humor. Feed it, play Gem Match to keep it happy, and check back later. It's probably fine. Pixel art, Android, in open testing on Google Play now.
 
 ▸ Infinity Space — A top-down survival space shooter with procedurally generated sectors. Fight through hostile space, scavenge ship parts to stay fueled and armed, and push as deep as you can before the next sector ends you. In development for Android, Xbox, and Steam.
 
@@ -93,12 +93,12 @@ Chogots is a pocket creature-care game with a deadpan sense of humor. Feed it, p
 
 It's probably fine.
 
-We're in closed testing on Android. If you'd like in, email games@squalr.us with the subject "Chogots tester request" and we'll add you.
+We're in open testing on Android. Anyone can join, no invite needed.
 
 #indiegames #androidgames #pixelart
 ```
 
-First comment: `Test build: https://play.google.com/apps/testing/com.SqualrusGames.Chogots`
+First comment: `Join the test: https://games.squalr.us/#chogots` (the site sends Android visitors to Google Play and everyone else to the web opt-in page)
 
 **Post 3: Infinity Space teaser**
 
